@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CanMock_Example' do
+  pod 'CanMock', :path => '../'
+
+  target 'CanMock_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
