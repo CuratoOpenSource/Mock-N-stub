@@ -17,11 +17,11 @@ class MockSpec: QuickSpec {
             it("has everything you need to get started") {
                 sut.expect(callTo: #selector(Mock.doThis))
                 sut.expect(callTo: #selector(Mock.doThat))
-                sut.expect(callTo: #selector(Mock.say(name:)), thatMatches: { (args) -> (Bool) in
+                sut.expect(callTo: #selector(Mock.say(name:)), withArgumentsThatMatch: { (args) -> (Bool) in
                     return args as! String == "Chris"
                 })
                 
-                sut.expect(callTo: #selector(Mock.say(greeting:to:with:)), thatMatches: { (args) -> (Bool) in
+                sut.expect(callTo: #selector(Mock.say(greeting:to:with:)), withArgumentsThatMatch: { (args) -> (Bool) in
                     return args as! (String, String, UInt) == ("Hello", "Chris", 22)
                 })
                 

@@ -1,12 +1,12 @@
 import XCTest
 
-public protocol CanMock: HasCalls, HasVerifications {
+public protocol CanMock: CanStub, HasCalls, HasVerifications {
     
     func didCall(_ selector: Selector)
     func didCall(_ selector: Selector, with arguments: Any)
     
     func expect(callTo selector: Selector)
-    func expect(callTo selector: Selector, thatMatches matcher: @escaping ArgumentMatcher)
+    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: @escaping ArgumentMatcher)
     
     func verify(at location: Location)
 }
@@ -22,10 +22,10 @@ public extension CanMock {
     }
     
     func expect(callTo selector: Selector) {
-        expect(callTo: selector, thatMatches: anyArgumentMatcher )
+        expect(callTo: selector, withArgumentsThatMatch: anyArgumentMatcher )
     }
     
-    func expect(callTo selector: Selector, thatMatches matcher: @escaping ArgumentMatcher) {
+    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: @escaping ArgumentMatcher) {
         verifications.append(Verification(selector: selector, matcher: matcher))
     }
     
@@ -61,7 +61,8 @@ public struct Call {
 
 public typealias ArgumentMatcher = (Any)->(Bool)
 
-let anyArgumentMatcher: ArgumentMatcher = { _ in return true }
+/// Matches any argument
+func anyArgumentMatcher( arguments: Any) -> Bool { return true }
 
 public struct Verification {
     
@@ -86,4 +87,45 @@ public struct Location {
 
 public func verify(_ mock: CanMock, inFile file: StaticString = #file, atLine line: UInt = #line) {
     mock.verify(at: Location(file: file, line: line))
+}
+
+//MARK: - CanStub
+public protocol CanStub: HasSelectorValues {
+    
+    func given(_ selector: Selector, willReturn: Any?)
+    func given(_ selector: Selector, withArgumentsThatMatch matcher: @escaping ArgumentMatcher, willReturn: Any?)
+    func value(for selector: Selector, with arguments: Any) -> Any?
+}
+
+public extension CanStub {
+    
+    func given(_ selector: Selector, willReturn value: Any?) {
+        given(selector, withArgumentsThatMatch: anyArgumentMatcher, willReturn: value)
+    }
+    
+    func given(_ selector: Selector, withArgumentsThatMatch matcher: @escaping ArgumentMatcher, willReturn value: Any?) {
+        selectorValues.append(SelectorValue(selector: selector, value: value, matcher: matcher))
+    }
+    
+    func value(for selector: Selector, with arguments: Any) -> Any? {
+        return selectorValues.filter({ $0.selector == selector }).filter({ $0.matcher(arguments) }).compactMap({ $0.value }).first
+    }
+}
+
+public protocol HasSelectorValues: class {
+    
+    var selectorValues: [SelectorValue] { get set }
+}
+
+public struct SelectorValue {
+    
+    public let selector: Selector
+    public let value: Any?
+    public let matcher: ArgumentMatcher
+    
+    public init(selector: Selector, value: Any?, matcher: @escaping ArgumentMatcher) {
+        self.selector = selector
+        self.value = value
+        self.matcher = matcher
+    }
 }

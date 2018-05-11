@@ -11,8 +11,9 @@ import CanMock
 
 class Mock: CanMock, MyProtocol {
     
-    var verifications: [Verification] = [Verification]()
-    var calls: [Call] = [Call]()
+    var selectorValues = [SelectorValue]()
+    var verifications = [Verification]()
+    var calls = [Call]()
     
     @objc func doThis() {
         didCall(#selector(doThis))
