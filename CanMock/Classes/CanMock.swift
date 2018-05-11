@@ -32,7 +32,7 @@ public extension CanMock {
     func verify(at location: Location) {
         for verification in verifications {
             if calls.filter({ $0.selector == verification.selector }).filter({ verification.matcher($0.arguments) }).count == 0 {
-                XCTFail("Could not verify call to \(verification.selector)", file: location.file, line: location.line)
+                XCTFail("Could not verify call to `\(verification.selector)`", file: location.file, line: location.line)
             }
         }
     }
