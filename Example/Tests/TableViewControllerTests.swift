@@ -62,11 +62,24 @@ class MockTableViewDataSourceSpec: QuickSpec {
                     
                     it("Fails when expected methods are not called with arguments that don't match", closure: {
                         //Arrange
-                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: { (args) -> (Bool) in
-                            guard let args = args as? (UITableView, Int) else { return false }
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
                             return args.0 === tableView && args.1 == 42
-                        })
+                        }))
                         _ = sut.tableView(tableView, numberOfRowsInSection: 22)
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
+                    
+                    it("Fails when expected methods are called with incorrect matcher type", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int, Any)) -> Bool in
+                            return args.0 === tableView && args.1 == 42
+                        }))
+                        _ = sut.tableView(tableView, numberOfRowsInSection: 42)
                         
                         //Act
                         verify(sut)
@@ -118,10 +131,9 @@ class MockTableViewDataSourceSpec: QuickSpec {
                     
                     it("Doesn't fail when expected methods are called with arguments that match", closure: {
                         //Arrange
-                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: { (args) -> (Bool) in
-                            guard let args = args as? (UITableView, Int) else { return false }
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
                             return args.0 === tableView && args.1 == 42
-                        })
+                        }))
                         _ = sut.tableView(tableView, numberOfRowsInSection: 42)
                         
                         //Act

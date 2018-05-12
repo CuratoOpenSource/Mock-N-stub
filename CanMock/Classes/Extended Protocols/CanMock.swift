@@ -1,10 +1,10 @@
 public protocol CanMock: CanStub, HasCallRegistry, HasVerifications, HasFailureHandler {
     
     func expect(callTo selector: Selector)
-    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: @escaping ArgumentMatcher)
+    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: CanMatchArguments)
     
     func expect(callTo method: String)
-    func expect(callTo method: String, withArgumentsThatMatch matcher: @escaping ArgumentMatcher)
+    func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments)
     
     func verify(at location: Location)
 }
@@ -12,25 +12,25 @@ public protocol CanMock: CanStub, HasCallRegistry, HasVerifications, HasFailureH
 public extension CanMock {
 
     func expect(callTo selector: Selector) {
-        expect(callTo: selector, withArgumentsThatMatch: anyArgumentMatcher )
+        expect(callTo: selector, withArgumentsThatMatch: anyArgumentMatcher)
     }
     
     func expect(callTo method: String) {
         expect(callTo: method, withArgumentsThatMatch: anyArgumentMatcher)
     }
     
-    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: @escaping ArgumentMatcher) {
+    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: CanMatchArguments) {
         verifications.append(Verification(selector: selector, matcher: matcher))
     }
     
-    func expect(callTo method: String, withArgumentsThatMatch matcher: @escaping ArgumentMatcher) {
+    func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments) {
         verifications.append(Verification(function: method, matcher: matcher))
     }
     
     func verify(at location: Location) {
         for verification in verifications {
             if callRegistry.calls.filter({  $0.selector == verification.selector &&
-                                            $0.function == verification.function }).filter({ verification.matcher($0.arguments) }).count == 0 {
+                                            $0.function == verification.function }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
 
                 failureHandler.fail(with: "Could not verify call to `\(methodName(from: verification))`", at: location)
             }
