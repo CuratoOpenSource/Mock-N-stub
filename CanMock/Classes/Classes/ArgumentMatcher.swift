@@ -1,4 +1,4 @@
-public class Matcher<ArgumentsType> {
+public class ArgumentMatcher<ArgumentsType> {
     
     private let matcher: (ArgumentsType) -> Bool
     
@@ -7,14 +7,15 @@ public class Matcher<ArgumentsType> {
     }
 }
 
-public extension Matcher {
+public extension ArgumentMatcher {
     
-    public static var any: Matcher<Any> {
-        return Matcher<Any>(matcher: { (args) -> Bool in return true })
+    /// Matches any argument
+    public static var any: ArgumentMatcher<Any> {
+        return anyArgumentMatcher
     }
 }
 
-extension Matcher: CanMatchArguments {
+extension ArgumentMatcher: CanMatchArguments {
     
     public func match(arguments: Any) -> Bool {
         guard let arguments = arguments as? ArgumentsType else { return false }
