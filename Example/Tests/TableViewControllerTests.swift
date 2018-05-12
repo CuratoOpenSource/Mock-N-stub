@@ -3,47 +3,134 @@ import Quick
 import Nimble
 import CanMock
 
-class TableViewSpec: QuickSpec {
+class MockTableViewDataSourceSpec: QuickSpec {
     
     override func spec() {
-        describe("Mock") {
+        describe("MockTableViewDataSource") {
             
             var sut: MockTableViewDataSource!
-            var tableView: UITableView!
+            let tableView = UITableView()
+            let indexPath = IndexPath()
+            var mockFailureHandler: MockFailureHandler!
             
-            context("DataSource", {
+            context("Mocking", {
                 beforeEach {
                     sut = MockTableViewDataSource()
-                    tableView = UITableView()
                 }
                 
-                it("calls the expected dataSource methods") {
-                    //Arrange
-                    sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)))
-                    sut.expect(callTo: #selector(sut.tableView(_:cellForRowAt:)))
+                context("Expecting failures", {
+                    beforeEach {
+                        mockFailureHandler = MockFailureHandler()
+                        sut.given("failureHandler", willReturn: mockFailureHandler)
+                        mockFailureHandler.expect(callTo: "fail(with:at:)")
+                    }
                     
-                    //Act
-                    _ = sut.tableView(tableView, numberOfRowsInSection: 0)
-                    _ = sut.tableView(tableView, cellForRowAt: IndexPath())
+                    it("Fails when expected methods are not called", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
                     
-                    //Assert
-                    verify(sut)
-                }
+                    it("Fails when expected methods are not called", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:cellForRowAt:)))
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
+                    
+                    it("Fails when expected methods are not called", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:cellForRowAt:)))
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        _ = sut.tableView(tableView, cellForRowAt: indexPath)
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
+                    
+                    it("Fails when expected methods are not called with arguments that don't match", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: { (args) -> (Bool) in
+                            guard let args = args as? (UITableView, Int) else { return false }
+                            return args.0 === tableView && args.1 == 42
+                        })
+                        _ = sut.tableView(tableView, numberOfRowsInSection: 22)
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
+                })
                 
-                it("provids the correct value") {
-                    //Arrange
-                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: { (args) -> (Bool) in
-                        return (args as! (UITableView, Int)).1 == 2
-                    }, willReturn: 42)
+                context("Not expecting failures", {
                     
-                    //Act
-                    _ = sut.tableView(tableView, numberOfRowsInSection: 0)
-                    _ = sut.tableView(tableView, cellForRowAt: IndexPath())
+                    it("Doesn't fail when expected methods are called", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        _ = sut.tableView(tableView, numberOfRowsInSection: 42)
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
                     
-                    //Assert
-                    expect(sut.tableView(UITableView(), numberOfRowsInSection: 2)).to(equal(42))
-                    expect(sut.tableView(UITableView(), numberOfRowsInSection: 1)).notTo(equal(42))
-                }
+                    it("Doesn't fail when expected methods are called", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:cellForRowAt:)))
+                        _ = sut.tableView(tableView, cellForRowAt: indexPath)
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
+                    
+                    it("Doesn't fail when expected methods are called", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:cellForRowAt:)))
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        _ = sut.tableView(tableView, cellForRowAt: indexPath)
+                        _ = sut.tableView(tableView, numberOfRowsInSection: 42)
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
+                    
+                    it("Doesn't fail when expected methods are called with arguments that match", closure: {
+                        //Arrange
+                        sut.expect(callTo: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: { (args) -> (Bool) in
+                            guard let args = args as? (UITableView, Int) else { return false }
+                            return args.0 === tableView && args.1 == 42
+                        })
+                        _ = sut.tableView(tableView, numberOfRowsInSection: 42)
+                        
+                        //Act
+                        verify(sut)
+                        
+                        //Assert
+                        verify(mockFailureHandler)
+                    })
+                })
             })
         }
     }

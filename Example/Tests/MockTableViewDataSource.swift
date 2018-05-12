@@ -11,17 +11,19 @@ import CanMock
 
 class MockTableViewDataSource: NSObject, CanMock, UITableViewDataSource {
 
-    var selectorValues = [SelectorValue]()
-    var verifications: [Verification] = [Verification]()
-    var calls: [Call] = [Call]()
+    let callRegistry = CallRegistry()
+    var callValues = [CallValue]()
+    var calls = [Call]()
+    var verifications = [Verification]()
+    var selectorValues = [CallValue]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        didCall(#selector(tableView(_:numberOfRowsInSection:)), with: (tableView, section))
+        callRegistry.didCallSelector(#selector(tableView(_:numberOfRowsInSection:)), with: (tableView, section))
         return value(for: #selector(tableView(_:numberOfRowsInSection:)), with: (tableView, section)) as? Int ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        didCall(#selector(tableView(_:cellForRowAt:)), with: (tableView, indexPath))
+        callRegistry.didCallSelector(#selector(tableView(_:cellForRowAt:)), with: (tableView, indexPath))
         return value(for: #selector(tableView(_:cellForRowAt:)), with: (indexPath)) as? UITableViewCell ?? UITableViewCell()
     }
 }

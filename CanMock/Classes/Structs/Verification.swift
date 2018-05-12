@@ -1,10 +1,18 @@
-public struct Verification {
+public class Verification {
     
-    let selector: Selector
+    let selector: Selector?
+    let function: String?
     let matcher: ArgumentMatcher
     
-    init(selector: Selector, matcher: @escaping ArgumentMatcher) {
+    public required init(selector: Selector, matcher: @escaping ArgumentMatcher) {
         self.selector = selector
+        self.function = nil
+        self.matcher = matcher
+    }
+    
+    public required init(function: String, matcher: @escaping ArgumentMatcher) {
+        self.selector = nil
+        self.function = function
         self.matcher = matcher
     }
 }
