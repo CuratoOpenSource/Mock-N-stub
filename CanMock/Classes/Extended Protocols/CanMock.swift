@@ -1,11 +1,4 @@
-public protocol CanMock: CanStub, HasCalls, HasVerifications, HasFailureHandler {
-    
-    func expect(callTo selector: Selector)
-    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: CanMatchArguments)
-    
-    func expect(callTo method: String)
-    func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments)
-}
+public protocol CanMock: CanStub, HasCalls, HasVerifications, HasFailureHandler {}
 
 public extension CanMock {
 
@@ -19,19 +12,11 @@ public extension CanMock {
         }
     }
     
-    func expect(callTo selector: Selector) {
-        expect(callTo: selector, withArgumentsThatMatch: anyArgumentMatcher)
-    }
-    
-    func expect(callTo method: String) {
-        expect(callTo: method, withArgumentsThatMatch: anyArgumentMatcher)
-    }
-    
-    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: CanMatchArguments) {
+    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: CanMatchArguments = anyArgumentMatcher) {
         verifications.append(Verification(selector: selector, matcher: matcher))
     }
     
-    func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments) {
+    func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments = anyArgumentMatcher) {
         verifications.append(Verification(function: method, matcher: matcher))
     }
     
