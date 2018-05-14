@@ -29,10 +29,10 @@ public extension CanStub {
     }
     
     func value(for selector: Selector, with arguments: Any) -> Any? {
-        return callValues.filter({ $0.selector == selector }).filter({ $0.matcher.match(arguments: arguments) }).compactMap({ $0.value }).first
+        return callValues.filter({ $0.selector == selector }).filter({ $0.matcher.match(arguments: arguments) }).compactMap({ $0.value }).last
     }
     
     func value(for method: String, with arguments: Any) -> Any? {
-        return callValues.filter({ $0.function == method }).filter({ $0.matcher.match(arguments: arguments) }).compactMap({ $0.value }).first
+        return callValues.filter({ $0.function == method }).filter({ $0.matcher.match(arguments: arguments) }).compactMap({ $0.value }).last
     }
 }
