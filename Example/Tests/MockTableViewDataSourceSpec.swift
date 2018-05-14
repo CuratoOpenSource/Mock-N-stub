@@ -13,9 +13,14 @@ class MockTableViewDataSourceSpec: QuickSpec {
             let indexPath = IndexPath()
             var mockFailureHandler: MockFailureHandler!
             
+            beforeEach {
+                sut = MockTableViewDataSource()
+            }
+            
             context("Mocking", {
                 beforeEach {
-                    sut = MockTableViewDataSource()
+                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 0)
+                    sut.given(#selector(sut.tableView(_:cellForRowAt:)), willReturn: UITableViewCell())
                 }
                 
                 context("Expecting failures", {
@@ -138,6 +143,39 @@ class MockTableViewDataSourceSpec: QuickSpec {
                         //Assert
                         sut.verify()
                     })
+                })
+            })
+            
+            context("Stubbing", {
+                it("Provides the correct returnValue", closure: {
+                    //Arrange
+                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 42)
+                    
+                    //Assert
+                    expect(sut.tableView(tableView, numberOfRowsInSection: 2)).to(equal(42))
+                })
+                
+                it("Provides the correct returnValue", closure: {
+                    //Arrange
+                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 10)
+                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 42)
+                    
+                    //Assert
+                    expect(sut.tableView(tableView, numberOfRowsInSection: 2)).to(equal(42))
+                })
+                
+                it("Provides the correct returnValue", closure: {
+                    //Arrange
+                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
+                        args.1 == 1
+                    }), willReturn: 22)
+                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
+                        args.1 == 2
+                    }), willReturn: 42)
+
+                    //Assert
+                    expect(sut.tableView(tableView, numberOfRowsInSection: 1)).to(equal(22))
+                    expect(sut.tableView(tableView, numberOfRowsInSection: 2)).to(equal(42))
                 })
             })
         }

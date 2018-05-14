@@ -11,13 +11,11 @@ import CanMock
 
 class MockFailureHandler: CanMock, CanFailWithMessageAtLocation {
     
-    let callRegistry = CallRegistry()
     var callValues = [CallValue]()
     var calls = [Call]()
     var verifications = [Verification]()
-    var selectorValues = [CallValue]()
     
     func fail(with message: String, at location: Location) {
-        callRegistry.didCallFunction(with: (message, location))
+        didCall(with: (message, location))
     }
 }

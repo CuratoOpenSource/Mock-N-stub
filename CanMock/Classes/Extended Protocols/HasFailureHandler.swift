@@ -6,6 +6,6 @@ public protocol HasFailureHandler {
 public extension HasFailureHandler where Self: CanMock {
     
     var failureHandler: CanFailWithMessageAtLocation {
-        return value(for: #function, with: ()) as? CanFailWithMessageAtLocation ?? XCTFailureHandler()
+        return XCTFailureHandler()
     }
 }
