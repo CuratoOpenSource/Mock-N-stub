@@ -27,6 +27,16 @@ public extension CanMock {
     func didCall(_ function: String = #function, with arguments: Any = ()) {
         calls.append(Call(function: function, arguments: arguments))
     }
+    
+    func didCall<ReturnType>(_ selector: Selector, with arguments: Any = ()) -> ReturnType? {
+        didCall(selector, with: arguments)
+        return value(for: selector, with: arguments)
+    }
+    
+    func didCall<ReturnType>(_ function: String = #function, with arguments: Any = ()) -> ReturnType? {
+        didCall(function, with: arguments)
+        return value(for: function, with: arguments)
+    }
 }
 
 //MARK: Private Methods

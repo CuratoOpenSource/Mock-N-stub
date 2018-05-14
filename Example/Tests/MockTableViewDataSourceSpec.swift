@@ -18,6 +18,10 @@ class MockTableViewDataSourceSpec: QuickSpec {
             }
             
             context("Mocking", {
+                beforeEach {
+                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 0)
+                    sut.given(#selector(sut.tableView(_:cellForRowAt:)), willReturn: UITableViewCell())
+                }
                 
                 context("Expecting failures", {
                     beforeEach {
