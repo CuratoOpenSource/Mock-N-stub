@@ -6,11 +6,21 @@ public protocol CanMock: CanStub, HasCallRegistry, HasVerifications, HasFailureH
     func expect(callTo method: String)
     func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments)
     
-    func verify(at location: Location)
+    
 }
 
 public extension CanMock {
 
+    func verify(inFile file: StaticString = #file, atLine line: UInt = #line) {
+        for verification in verifications {
+            if callRegistry.calls.filter({  $0.selector == verification.selector &&
+                $0.function == verification.function }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
+                
+                failureHandler.fail(with: "Could not verify call to `\(methodName(from: verification))`", at: Location(file: file, line: line))
+            }
+        }
+    }
+    
     func expect(callTo selector: Selector) {
         expect(callTo: selector, withArgumentsThatMatch: anyArgumentMatcher)
     }
@@ -25,16 +35,6 @@ public extension CanMock {
     
     func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments) {
         verifications.append(Verification(function: method, matcher: matcher))
-    }
-    
-    func verify(at location: Location) {
-        for verification in verifications {
-            if callRegistry.calls.filter({  $0.selector == verification.selector &&
-                                            $0.function == verification.function }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
-
-                failureHandler.fail(with: "Could not verify call to `\(methodName(from: verification))`", at: location)
-            }
-        }
     }
 }
 
