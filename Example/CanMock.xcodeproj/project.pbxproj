@@ -16,7 +16,7 @@
 		804A6060A63862D54D9671E1 /* Pods_CanMock_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6561E4AF8E27052B48185B /* Pods_CanMock_Example.framework */; };
 		DEA10CFE209E061F0013C501 /* MyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA10CFD209E061F0013C501 /* MyProtocol.swift */; };
 		DEBD59C120A61E8D00ED1D2F /* MyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA10CFD209E061F0013C501 /* MyProtocol.swift */; };
-		DEBD59C320A641C800ED1D2F /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* TableViewControllerTests.swift */; };
+		DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceSpec.swift */; };
 		DEBD59C620A6423C00ED1D2F /* MockTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C420A6423500ED1D2F /* MockTableViewDataSource.swift */; };
 		DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		82E63D33B546AB47C1ED5F2D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8EDC232A10E03686117B71E8 /* Pods-CanMock_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanMock_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DEA10CFD209E061F0013C501 /* MyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProtocol.swift; sourceTree = "<group>"; };
-		DEBD59C220A641C800ED1D2F /* TableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
+		DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceSpec.swift; sourceTree = "<group>"; };
 		DEBD59C420A6423500ED1D2F /* MockTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSource.swift; sourceTree = "<group>"; };
 		DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFailureHandler.swift; sourceTree = "<group>"; };
 		F9AFFFA1EEE3B389FF272A3D /* Pods-CanMock_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanMock_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DEBD59C220A641C800ED1D2F /* TableViewControllerTests.swift */,
+				DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				DEEB794020A6FFFA0002B6A1 /* Fakes */,
 			);
@@ -382,7 +382,7 @@
 				DEBD59C120A61E8D00ED1D2F /* MyProtocol.swift in Sources */,
 				DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */,
 				DEBD59C620A6423C00ED1D2F /* MockTableViewDataSource.swift in Sources */,
-				DEBD59C320A641C800ED1D2F /* TableViewControllerTests.swift in Sources */,
+				DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
