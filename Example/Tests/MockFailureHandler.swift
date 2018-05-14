@@ -11,10 +11,6 @@ import CanMock
 
 class MockFailureHandler: CanMock, CanFailWithMessageAtLocation {
     
-    var callValues = [CallValue]()
-    var calls = [Call]()
-    var verifications = [Verification]()
-    
     func fail(with message: String, at location: Location) {
         didCall(with: (message, location))
     }

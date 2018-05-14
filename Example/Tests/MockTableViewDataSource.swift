@@ -10,14 +10,6 @@ import Foundation
 import CanMock
 
 class MockTableViewDataSource: NSObject, CanMock, UITableViewDataSource {
-
-    var callValues = [CallValue]()
-    var calls = [Call]()
-    var verifications = [Verification]()
-    
-    var failureHandler: CanFailWithMessageAtLocation {
-        return didCall()!
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return didCall(#selector(tableView(_:numberOfRowsInSection:)), with: (tableView, section))!
