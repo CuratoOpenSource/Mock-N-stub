@@ -38,5 +38,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'XCTest'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'InjectableLoggers', '~> 1.0'
 end

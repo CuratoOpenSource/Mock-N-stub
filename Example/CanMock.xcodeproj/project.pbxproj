@@ -14,8 +14,12 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		804A6060A63862D54D9671E1 /* Pods_CanMock_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6561E4AF8E27052B48185B /* Pods_CanMock_Example.framework */; };
-		DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceSpec.swift */; };
-		DEBD59C620A6423C00ED1D2F /* MockTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C420A6423500ED1D2F /* MockTableViewDataSource.swift */; };
+		DE96FFB220ACD29800D76B8E /* MockTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFB120ACD29800D76B8E /* MockTableViewDelegate.swift */; };
+		DE96FFB520ACD35900D76B8E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFB420ACD35900D76B8E /* TableViewDataSource.swift */; };
+		DE96FFB920ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFB820ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift */; };
+		DE96FFBB20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */; };
+		DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift */; };
+		DEBD59C620A6423C00ED1D2F /* MockTableViewDataSourceUsingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */; };
 		DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +51,12 @@
 		8160D6049BD93B0ECC16896D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		82E63D33B546AB47C1ED5F2D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8EDC232A10E03686117B71E8 /* Pods-CanMock_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanMock_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceSpec.swift; sourceTree = "<group>"; };
-		DEBD59C420A6423500ED1D2F /* MockTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSource.swift; sourceTree = "<group>"; };
+		DE96FFB120ACD29800D76B8E /* MockTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDelegate.swift; sourceTree = "<group>"; };
+		DE96FFB420ACD35900D76B8E /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		DE96FFB820ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingFunctionsSpec.swift; sourceTree = "<group>"; };
+		DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingFunctions.swift; sourceTree = "<group>"; };
+		DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingSelectorsSpec.swift; sourceTree = "<group>"; };
+		DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingSelectors.swift; sourceTree = "<group>"; };
 		DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFailureHandler.swift; sourceTree = "<group>"; };
 		F9AFFFA1EEE3B389FF272A3D /* Pods-CanMock_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanMock_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +147,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceSpec.swift */,
+				DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift */,
+				DE96FFB820ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				DEEB794020A6FFFA0002B6A1 /* Fakes */,
 			);
@@ -164,9 +173,18 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		DE96FFB320ACD34200D76B8E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DE96FFB420ACD35900D76B8E /* TableViewDataSource.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		DEEB794020A6FFFA0002B6A1 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				DE96FFB320ACD34200D76B8E /* Protocols */,
 				DEEB794120A700040002B6A1 /* Mocks */,
 			);
 			name = Fakes;
@@ -176,7 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */,
-				DEBD59C420A6423500ED1D2F /* MockTableViewDataSource.swift */,
+				DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */,
+				DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */,
+				DE96FFB120ACD29800D76B8E /* MockTableViewDelegate.swift */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -310,10 +330,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CanMock/CanMock.framework",
+				"${BUILT_PRODUCTS_DIR}/InjectableLoggers/InjectableLoggers.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CanMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InjectableLoggers.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,9 +396,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE96FFBB20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
 				DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */,
-				DEBD59C620A6423C00ED1D2F /* MockTableViewDataSource.swift in Sources */,
-				DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceSpec.swift in Sources */,
+				DE96FFB520ACD35900D76B8E /* TableViewDataSource.swift in Sources */,
+				DEBD59C620A6423C00ED1D2F /* MockTableViewDataSourceUsingSelectors.swift in Sources */,
+				DE96FFB220ACD29800D76B8E /* MockTableViewDelegate.swift in Sources */,
+				DE96FFB920ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift in Sources */,
+				DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

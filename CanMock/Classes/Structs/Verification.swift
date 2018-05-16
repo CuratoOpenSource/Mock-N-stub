@@ -16,3 +16,24 @@ public class Verification {
         self.matcher = matcher
     }
 }
+
+extension Verification: CustomStringConvertible {
+    
+    public var description: String {
+        var description = ""
+        
+        if let selector = selector {
+            description.append("selector: ")
+            description.append(String(describing: selector))
+        }
+        if let function = function {
+            description.append("function: ")
+            description.append(function)
+        }
+        
+        description.append(" matcher: ")
+        description.append(String(describing: matcher))
+        
+        return description
+    }
+}
