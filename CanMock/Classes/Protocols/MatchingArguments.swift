@@ -1,4 +1,4 @@
-public protocol CanMatchArguments {
+public protocol MatchingArguments {
     
     func match(arguments: Any) -> Bool
 }

@@ -1,9 +1,9 @@
-public protocol HasVerifications: class {
+public protocol ProvidingMutableVerifications: class {
     
     var verifications: [Verification] { get set }
 }
 
-public extension HasVerifications {
+public extension ProvidingMutableVerifications {
     
     var verifications: [Verification] {
         get {

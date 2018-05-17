@@ -9,7 +9,7 @@
 import Foundation
 import CanMock
 
-class MockFailureHandler: CanMock, CanFailWithMessageAtLocation {
+class MockFailureHandler: Mocking, FailingWithMessageAtLocation {
     
     func fail(with message: String, at location: Location) {
         didCall(with: (message, location))

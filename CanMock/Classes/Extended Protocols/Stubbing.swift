@@ -1,14 +1,12 @@
-public protocol CanStub: HasCallValues {
-    
-}
+public protocol Stubbing: ProvidingMutableCallValues {}
 
-public extension CanStub {
+public extension Stubbing {
     
-    func given(_ selector: Selector, withArgumentsThatMatch matcher: CanMatchArguments = anyArgumentMatcher, willReturn value: Any?) {
+    func given(_ selector: Selector, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
         callValues.append(CallValue(selector: selector, value: value, matcher: matcher))
     }
     
-    func given(_ method: String, withArgumentsThatMatch matcher: CanMatchArguments = anyArgumentMatcher, willReturn value: Any?) {
+    func given(_ method: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
         callValues.append(CallValue(function: method, value: value, matcher: matcher))
     }
     

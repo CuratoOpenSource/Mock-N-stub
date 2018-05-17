@@ -1,6 +1,6 @@
-public protocol CanMock: CanStub, HasCalls, HasVerifications, HasFailureHandler {}
+public protocol Mocking: Stubbing, ProvidingMutableCalls, ProvidingMutableVerifications, ProvidingFailureHandler {}
 
-public extension CanMock {
+public extension Mocking {
 
     func verify(inFile file: StaticString = #file, atLine line: UInt = #line) {
         for verification in verifications {
@@ -12,11 +12,11 @@ public extension CanMock {
         }
     }
     
-    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: CanMatchArguments = anyArgumentMatcher) {
+    func expect(callTo selector: Selector, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
         verifications.append(Verification(selector: selector, matcher: matcher))
     }
     
-    func expect(callTo method: String, withArgumentsThatMatch matcher: CanMatchArguments = anyArgumentMatcher) {
+    func expect(callTo method: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
         verifications.append(Verification(function: method, matcher: matcher))
     }
     
@@ -40,7 +40,7 @@ public extension CanMock {
 }
 
 //MARK: Private Methods
-private extension CanMock {
+private extension Mocking {
     
     func methodName(from verification: Verification) -> String {
         if let selector = verification.selector {

@@ -1,9 +1,9 @@
-public protocol HasCalls: class {
+public protocol ProvidingMutableCalls: class {
     
     var calls: [Call] { get set }
 }
 
-public extension HasCalls {
+public extension ProvidingMutableCalls {
     
     var calls: [Call] {
         get {

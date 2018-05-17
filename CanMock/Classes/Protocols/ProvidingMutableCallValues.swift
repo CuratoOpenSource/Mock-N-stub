@@ -1,9 +1,9 @@
-public protocol HasCallValues: class {
+public protocol ProvidingMutableCallValues: class {
     
     var callValues: [CallValue] { get set }
 }
 
-public extension HasCallValues {
+public extension ProvidingMutableCallValues {
     
     var callValues: [CallValue] {
         get {
