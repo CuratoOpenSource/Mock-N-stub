@@ -1,5 +1,7 @@
 PODS:
-  - CanMock (0.1.0)
+  - CanMock (0.1.0):
+    - InjectableLoggers (~> 1.0)
+  - InjectableLoggers (1.1.0)
   - Nimble (7.1.1)
   - Quick (1.3.0)
 
@@ -10,6 +12,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - InjectableLoggers
     - Nimble
     - Quick
 
@@ -18,7 +21,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CanMock: 75222a6d6e76debc09d3e211c8f391e7bce7e8a3
+  CanMock: 0e758d1a27845711c1519f2cf6ca8b9e06f6b7e1
+  InjectableLoggers: 4c597e6e6214d64e8e840238ec9e1a4cc70da60a
   Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
   Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
 

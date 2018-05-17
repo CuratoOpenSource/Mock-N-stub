@@ -16,3 +16,23 @@ public class Call {
         self.arguments = arguments
     }
 }
+
+extension Call: CustomStringConvertible {
+    public var description: String {
+        var description = ""
+        
+        if let selector = selector {
+            description.append("selector: ")
+            description.append(String(describing: selector))
+        }
+        if let function = function {
+            description.append("function: ")
+            description.append(function)
+        }
+        
+        description.append(" arguments: ")
+        description.append(String(describing: arguments))
+        
+        return description
+    }
+}

@@ -9,7 +9,7 @@
 import Foundation
 import CanMock
 
-class MockTableViewDataSource: NSObject, CanMock, UITableViewDataSource {
+class MockTableViewDataSourceUsingSelectors: NSObject, CanMock, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return didCall(#selector(tableView(_:numberOfRowsInSection:)), with: (tableView, section))!
