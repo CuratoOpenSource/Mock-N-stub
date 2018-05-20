@@ -7,11 +7,11 @@ class PropertiesAsSelectorsSpec: QuickSpec {
     
     override func spec() {
         given("Mock with full name and optional nickname") {
-            var sut: MockUsingSelectorsContainingFullnameAndOptionalNickname!
+            var sut: MockContainingFullnameAndOptionalNicknameUsingSelectors!
 
             //MARK: Stubbing
             beforeEach {
-                sut = MockUsingSelectorsContainingFullnameAndOptionalNickname()
+                sut = MockContainingFullnameAndOptionalNicknameUsingSelectors()
             }
             
             when("fullName is stubbed", closure: {
