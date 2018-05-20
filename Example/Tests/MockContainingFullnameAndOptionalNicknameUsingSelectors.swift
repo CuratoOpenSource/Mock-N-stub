@@ -9,7 +9,7 @@
 import Foundation
 import CanMock
 
-class MockUsingSelectorsContainingFullnameAndOptionalNickname: Mocking, ContainingFullName, ContainingOptionalNickname {
+class MockContainingFullnameAndOptionalNicknameUsingSelectors: Mocking, ContainingFullName, ContainingOptionalNickname {
     
     @objc var fullName: String {
         get {

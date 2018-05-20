@@ -18,4 +18,9 @@ class MockTableViewDataSourceUsingFunctions: NSObject, Mocking, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return didCallFunction(withArguments: tableView, indexPath)!
     }
+    
+    struct Function {
+        static let tableView_NumberOfRowsInSection = "tableView(_:numberOfRowsInSection:)"
+        static let tableView_CellForRowAtIndexPath = "tableView(_:cellForRowAt:)"
+    }
 }

@@ -19,10 +19,11 @@
 		DE96FFBB20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */; };
 		DEB8451B20B1A16B008D6BDC /* ContainingFullName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8451A20B1A16B008D6BDC /* ContainingFullName.swift */; };
 		DEB8451F20B1A1A7008D6BDC /* ContainingOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8451E20B1A1A7008D6BDC /* ContainingOptionalNickname.swift */; };
-		DEB8452020B1A350008D6BDC /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE345E8220AE18EF00774F63 /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift */; };
+		DEB8452020B1A350008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE345E8220AE18EF00774F63 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift */; };
 		DEB8452220B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */; };
 		DEB8452420B1BD96008D6BDC /* PropertiesAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */; };
-		DEB8452620B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452520B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift */; };
+		DEB8452620B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452520B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */; };
+		DEB8452820B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452720B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift */; };
 		DEBD59C320A641C800ED1D2F /* MethodsAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */; };
 		DEBD59C620A6423C00ED1D2F /* MockTableViewDataSourceUsingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */; };
 		DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */; };
@@ -57,14 +58,15 @@
 		82E63D33B546AB47C1ED5F2D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8EDC232A10E03686117B71E8 /* Pods-CanMock_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanMock_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE13AD4C20B0691A00DDF3D5 /* GivenWhenThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivenWhenThen.swift; sourceTree = "<group>"; };
-		DE345E8220AE18EF00774F63 /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsingFunctionsContainingFullnameAndOptionalNickname.swift; sourceTree = "<group>"; };
+		DE345E8220AE18EF00774F63 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContainingFullnameAndOptionalNicknameUsingFunctions.swift; sourceTree = "<group>"; };
 		DE96FFB820ADB67000D76B8E /* ArraySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 		DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingFunctions.swift; sourceTree = "<group>"; };
 		DEB8451A20B1A16B008D6BDC /* ContainingFullName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainingFullName.swift; sourceTree = "<group>"; };
 		DEB8451E20B1A1A7008D6BDC /* ContainingOptionalNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainingOptionalNickname.swift; sourceTree = "<group>"; };
 		DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAsMethodsSpec.swift; sourceTree = "<group>"; };
 		DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAsSelectorsSpec.swift; sourceTree = "<group>"; };
-		DEB8452520B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsingSelectorsContainingFullnameAndOptionalNickname.swift; sourceTree = "<group>"; };
+		DEB8452520B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContainingFullnameAndOptionalNicknameUsingSelectors.swift; sourceTree = "<group>"; };
+		DEB8452720B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodsAsFunctionsSpec.swift; sourceTree = "<group>"; };
 		DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsAsSelectorsSpec.swift; sourceTree = "<group>"; };
 		DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingSelectors.swift; sourceTree = "<group>"; };
 		DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFailureHandler.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */,
+				DEB8452720B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift */,
 				DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */,
 				DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */,
 				DE96FFB820ADB67000D76B8E /* ArraySpec.swift */,
@@ -242,8 +245,8 @@
 				DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */,
 				DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */,
 				DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */,
-				DEB8452520B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift */,
-				DE345E8220AE18EF00774F63 /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift */,
+				DEB8452520B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */,
+				DE345E8220AE18EF00774F63 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB8452820B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift in Sources */,
 				DEB8451B20B1A16B008D6BDC /* ContainingFullName.swift in Sources */,
 				DE96FFBB20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
 				DEB8452420B1BD96008D6BDC /* PropertiesAsSelectorsSpec.swift in Sources */,
@@ -453,8 +457,8 @@
 				DEBD59C620A6423C00ED1D2F /* MockTableViewDataSourceUsingSelectors.swift in Sources */,
 				DE13AD4E20B0694100DDF3D5 /* GivenWhenThen.swift in Sources */,
 				DEBD59C320A641C800ED1D2F /* MethodsAsSelectorsSpec.swift in Sources */,
-				DEB8452620B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift in Sources */,
-				DEB8452020B1A350008D6BDC /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift in Sources */,
+				DEB8452620B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift in Sources */,
+				DEB8452020B1A350008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
