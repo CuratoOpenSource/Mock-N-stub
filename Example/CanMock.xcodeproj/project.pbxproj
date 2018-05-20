@@ -23,6 +23,7 @@
 		DEB8452220B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */; };
 		DEB8452420B1BD96008D6BDC /* PropertiesAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */; };
 		DEB8452620B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452520B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */; };
+		DEB8452820B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452720B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift */; };
 		DEBD59C320A641C800ED1D2F /* MethodsAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */; };
 		DEBD59C620A6423C00ED1D2F /* MockTableViewDataSourceUsingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */; };
 		DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */; };
@@ -65,6 +66,7 @@
 		DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAsMethodsSpec.swift; sourceTree = "<group>"; };
 		DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAsSelectorsSpec.swift; sourceTree = "<group>"; };
 		DEB8452520B1BDF4008D6BDC /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContainingFullnameAndOptionalNicknameUsingSelectors.swift; sourceTree = "<group>"; };
+		DEB8452720B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodsAsFunctionsSpec.swift; sourceTree = "<group>"; };
 		DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsAsSelectorsSpec.swift; sourceTree = "<group>"; };
 		DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingSelectors.swift; sourceTree = "<group>"; };
 		DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFailureHandler.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */,
+				DEB8452720B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift */,
 				DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */,
 				DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */,
 				DE96FFB820ADB67000D76B8E /* ArraySpec.swift */,
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB8452820B1E3AC008D6BDC /* MethodsAsFunctionsSpec.swift in Sources */,
 				DEB8451B20B1A16B008D6BDC /* ContainingFullName.swift in Sources */,
 				DE96FFBB20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
 				DEB8452420B1BD96008D6BDC /* PropertiesAsSelectorsSpec.swift in Sources */,
