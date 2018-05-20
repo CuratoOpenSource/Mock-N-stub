@@ -1,0 +1,2 @@
+workspace("Example/MockNStub.xcworkspace")
+scheme("MockNStub-Example")

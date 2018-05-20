@@ -1,0 +1,47 @@
+default_platform(:ios)
+
+platform :ios do
+  	lane :tests do
+      cocoapods(clean: true, podfile: "Example/Podfile", repo_update: true)		
+  		scan()
+	end
+
+	lane :release do
+		  releaseBranchName = git_branch
+
+      unless releaseBranchName.partition('/').first == "release"
+        raise "Incorrect branch, expected release branch".red
+      end
+
+      sh("git", "fetch")
+      sh("git", "checkout", releaseBranchName)
+
+      version = releaseBranchName.partition('/').last
+    
+      version_bump_podspec(path: "MockNStub.podspec", version_number: version)
+      cocoapods(clean: true, podfile: "Example/Podfile", repo_update: true)
+
+  		scan()
+  		pod_lib_lint
+
+  		sh("git", "add", "-A")
+  		sh("git", "commit", "-m", "Bump version to #{version} [ci skip]")
+      	sh("git", "fetch")
+  		sh("git", "checkout", "master")
+  		sh("git", "merge", releaseBranchName)
+  		sh("git", "tag", version)
+  		sh("git", "push", "origin", "--tags", "master")
+  		sh("git", "checkout", "develop")
+  		sh("git", "merge", "master")
+  		sh("git", "push", "origin", "develop")
+
+  		pod_push
+
+      github_release = set_github_release(repository_name: "mennolovink/MockNStub",
+                                          api_token: ENV["GITHUB_TOKEN"],
+                                          name: version,
+                                          tag_name: version,
+                                          description: "Initial Release",
+                                          commitish: "master")
+	end
+end
