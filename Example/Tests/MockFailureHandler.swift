@@ -12,6 +12,6 @@ import CanMock
 class MockFailureHandler: Mocking, FailingWithMessageAtLocation {
     
     func fail(with message: String, at location: Location) {
-        didCall(with: (message, location))
+        didCallFunction(withArguments: (message, location))
     }
 }

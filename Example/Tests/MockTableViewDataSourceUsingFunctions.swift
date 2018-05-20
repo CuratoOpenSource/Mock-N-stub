@@ -12,10 +12,10 @@ import CanMock
 class MockTableViewDataSourceUsingFunctions: NSObject, Mocking, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return didCall(with: (tableView, section))!
+        return didCallFunction(withArguments: tableView, section)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return didCall(with: (tableView, indexPath))!
+        return didCallFunction(withArguments: tableView, indexPath)!
     }
 }

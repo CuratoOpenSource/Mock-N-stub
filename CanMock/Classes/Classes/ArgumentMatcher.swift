@@ -18,7 +18,9 @@ public extension ArgumentMatcher {
 extension ArgumentMatcher: MatchingArguments {
     
     public func match(arguments: Any) -> Bool {
-        guard let arguments = arguments as? ArgumentsType else { return false }
+        guard let arguments = arguments as? ArgumentsType else {
+            return false
+        }
         return matcher(arguments)
     }
 }

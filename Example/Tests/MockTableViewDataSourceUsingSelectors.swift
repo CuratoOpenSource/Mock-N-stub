@@ -12,10 +12,10 @@ import CanMock
 class MockTableViewDataSourceUsingSelectors: NSObject, Mocking, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return didCall(#selector(tableView(_:numberOfRowsInSection:)), with: (tableView, section))!
+        return didCallSelector(#selector(tableView(_:numberOfRowsInSection:)), withArguments: tableView, section)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return didCall(#selector(tableView(_:cellForRowAt:)), with: (tableView, indexPath))!
+        return didCallSelector(#selector(tableView(_:cellForRowAt:)), withArguments: tableView, indexPath)!
     }
 }

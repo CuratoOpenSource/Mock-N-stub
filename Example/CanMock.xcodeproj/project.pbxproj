@@ -14,11 +14,16 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		804A6060A63862D54D9671E1 /* Pods_CanMock_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6561E4AF8E27052B48185B /* Pods_CanMock_Example.framework */; };
-		DE96FFB220ACD29800D76B8E /* MockTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFB120ACD29800D76B8E /* MockTableViewDelegate.swift */; };
-		DE96FFB520ACD35900D76B8E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFB420ACD35900D76B8E /* TableViewDataSource.swift */; };
-		DE96FFB920ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFB820ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift */; };
+		DE13AD4E20B0694100DDF3D5 /* GivenWhenThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE13AD4C20B0691A00DDF3D5 /* GivenWhenThen.swift */; };
+		DE73DA6720B04B5D00124263 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFB820ADB67000D76B8E /* ArraySpec.swift */; };
 		DE96FFBB20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */; };
-		DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift */; };
+		DEB8451B20B1A16B008D6BDC /* ContainingFullName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8451A20B1A16B008D6BDC /* ContainingFullName.swift */; };
+		DEB8451F20B1A1A7008D6BDC /* ContainingOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8451E20B1A1A7008D6BDC /* ContainingOptionalNickname.swift */; };
+		DEB8452020B1A350008D6BDC /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE345E8220AE18EF00774F63 /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift */; };
+		DEB8452220B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */; };
+		DEB8452420B1BD96008D6BDC /* PropertiesAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */; };
+		DEB8452620B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8452520B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift */; };
+		DEBD59C320A641C800ED1D2F /* MethodsAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */; };
 		DEBD59C620A6423C00ED1D2F /* MockTableViewDataSourceUsingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */; };
 		DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */; };
 /* End PBXBuildFile section */
@@ -51,11 +56,16 @@
 		8160D6049BD93B0ECC16896D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		82E63D33B546AB47C1ED5F2D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8EDC232A10E03686117B71E8 /* Pods-CanMock_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanMock_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DE96FFB120ACD29800D76B8E /* MockTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDelegate.swift; sourceTree = "<group>"; };
-		DE96FFB420ACD35900D76B8E /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-		DE96FFB820ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingFunctionsSpec.swift; sourceTree = "<group>"; };
+		DE13AD4C20B0691A00DDF3D5 /* GivenWhenThen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivenWhenThen.swift; sourceTree = "<group>"; };
+		DE345E8220AE18EF00774F63 /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsingFunctionsContainingFullnameAndOptionalNickname.swift; sourceTree = "<group>"; };
+		DE96FFB820ADB67000D76B8E /* ArraySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 		DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingFunctions.swift; sourceTree = "<group>"; };
-		DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingSelectorsSpec.swift; sourceTree = "<group>"; };
+		DEB8451A20B1A16B008D6BDC /* ContainingFullName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainingFullName.swift; sourceTree = "<group>"; };
+		DEB8451E20B1A1A7008D6BDC /* ContainingOptionalNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainingOptionalNickname.swift; sourceTree = "<group>"; };
+		DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAsMethodsSpec.swift; sourceTree = "<group>"; };
+		DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesAsSelectorsSpec.swift; sourceTree = "<group>"; };
+		DEB8452520B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsingSelectorsContainingFullnameAndOptionalNickname.swift; sourceTree = "<group>"; };
+		DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsAsSelectorsSpec.swift; sourceTree = "<group>"; };
 		DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableViewDataSourceUsingSelectors.swift; sourceTree = "<group>"; };
 		DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFailureHandler.swift; sourceTree = "<group>"; };
 		F9AFFFA1EEE3B389FF272A3D /* Pods-CanMock_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanMock_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanMock_Example/Pods-CanMock_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,10 +157,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DEBD59C220A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift */,
-				DE96FFB820ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift */,
+				DE73DA6B20B068A400124263 /* Common */,
+				DE73DA6A20B0689B00124263 /* Domain */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
-				DEEB794020A6FFFA0002B6A1 /* Fakes */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -173,10 +182,48 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		DE96FFB320ACD34200D76B8E /* Protocols */ = {
+		DE13AD4A20B068E700DDF3D5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DE96FFB420ACD35900D76B8E /* TableViewDataSource.swift */,
+				DEBD59C220A641C800ED1D2F /* MethodsAsSelectorsSpec.swift */,
+				DEB8452120B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift */,
+				DEB8452320B1BD95008D6BDC /* PropertiesAsSelectorsSpec.swift */,
+				DE96FFB820ADB67000D76B8E /* ArraySpec.swift */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		DE13AD4B20B0690300DDF3D5 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				DE13AD4C20B0691A00DDF3D5 /* GivenWhenThen.swift */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
+		DE73DA6A20B0689B00124263 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DEEB794020A6FFFA0002B6A1 /* Fakes */,
+				DE13AD4A20B068E700DDF3D5 /* Tests */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		DE73DA6B20B068A400124263 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DEB8451920B1A14C008D6BDC /* Protocols */,
+				DE13AD4B20B0690300DDF3D5 /* Functions */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		DEB8451920B1A14C008D6BDC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DEB8451A20B1A16B008D6BDC /* ContainingFullName.swift */,
+				DEB8451E20B1A1A7008D6BDC /* ContainingOptionalNickname.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -184,7 +231,6 @@
 		DEEB794020A6FFFA0002B6A1 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
-				DE96FFB320ACD34200D76B8E /* Protocols */,
 				DEEB794120A700040002B6A1 /* Mocks */,
 			);
 			name = Fakes;
@@ -196,7 +242,8 @@
 				DEEB794220A7000A0002B6A1 /* MockFailureHandler.swift */,
 				DEBD59C420A6423500ED1D2F /* MockTableViewDataSourceUsingSelectors.swift */,
 				DE96FFBA20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift */,
-				DE96FFB120ACD29800D76B8E /* MockTableViewDelegate.swift */,
+				DEB8452520B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift */,
+				DE345E8220AE18EF00774F63 /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -396,13 +443,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB8451B20B1A16B008D6BDC /* ContainingFullName.swift in Sources */,
 				DE96FFBB20ADB8E000D76B8E /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
+				DEB8452420B1BD96008D6BDC /* PropertiesAsSelectorsSpec.swift in Sources */,
+				DEB8452220B1A45F008D6BDC /* PropertiesAsMethodsSpec.swift in Sources */,
 				DEEB794320A7000A0002B6A1 /* MockFailureHandler.swift in Sources */,
-				DE96FFB520ACD35900D76B8E /* TableViewDataSource.swift in Sources */,
+				DE73DA6720B04B5D00124263 /* ArraySpec.swift in Sources */,
+				DEB8451F20B1A1A7008D6BDC /* ContainingOptionalNickname.swift in Sources */,
 				DEBD59C620A6423C00ED1D2F /* MockTableViewDataSourceUsingSelectors.swift in Sources */,
-				DE96FFB220ACD29800D76B8E /* MockTableViewDelegate.swift in Sources */,
-				DE96FFB920ADB67000D76B8E /* MockTableViewDataSourceUsingFunctionsSpec.swift in Sources */,
-				DEBD59C320A641C800ED1D2F /* MockTableViewDataSourceUsingSelectorsSpec.swift in Sources */,
+				DE13AD4E20B0694100DDF3D5 /* GivenWhenThen.swift in Sources */,
+				DEBD59C320A641C800ED1D2F /* MethodsAsSelectorsSpec.swift in Sources */,
+				DEB8452620B1BDF4008D6BDC /* MockUsingSelectorsContainingFullnameAndOptionalNickname.swift in Sources */,
+				DEB8452020B1A350008D6BDC /* MockUsingFunctionsContainingFullnameAndOptionalNickname.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
