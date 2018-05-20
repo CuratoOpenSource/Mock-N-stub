@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "CanMock_Example.app"
-               BlueprintName = "CanMock_Example"
-               ReferencedContainer = "container:CanMock.xcodeproj">
+               BuildableName = "MockNStub_Example.app"
+               BlueprintName = "MockNStub_Example"
+               ReferencedContainer = "container:MockNStub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "CanMock_Tests.xctest"
-               BlueprintName = "CanMock_Tests"
-               ReferencedContainer = "container:CanMock.xcodeproj">
+               BuildableName = "MockNStub_Tests.xctest"
+               BlueprintName = "MockNStub_Tests"
+               ReferencedContainer = "container:MockNStub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "CanMock_Tests.xctest"
-               BlueprintName = "CanMock_Tests"
-               ReferencedContainer = "container:CanMock.xcodeproj">
+               BuildableName = "MockNStub_Tests.xctest"
+               BlueprintName = "MockNStub_Tests"
+               ReferencedContainer = "container:MockNStub.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "CanMock_Example.app"
-            BlueprintName = "CanMock_Example"
-            ReferencedContainer = "container:CanMock.xcodeproj">
+            BuildableName = "MockNStub_Example.app"
+            BlueprintName = "MockNStub_Example"
+            ReferencedContainer = "container:MockNStub.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "CanMock_Example.app"
-            BlueprintName = "CanMock_Example"
-            ReferencedContainer = "container:CanMock.xcodeproj">
+            BuildableName = "MockNStub_Example.app"
+            BlueprintName = "MockNStub_Example"
+            ReferencedContainer = "container:MockNStub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -101,9 +101,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "CanMock_Example.app"
-            BlueprintName = "CanMock_Example"
-            ReferencedContainer = "container:CanMock.xcodeproj">
+            BuildableName = "MockNStub_Example.app"
+            BlueprintName = "MockNStub_Example"
+            ReferencedContainer = "container:MockNStub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

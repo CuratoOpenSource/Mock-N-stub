@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CanMock
+//  MockNStub
 //
-//  Created by mennolovink on 05/05/2018.
+//  Created by mennolovink on 05/20/2018.
 //  Copyright (c) 2018 mennolovink. All rights reserved.
 //
 

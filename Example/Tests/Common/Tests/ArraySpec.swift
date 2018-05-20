@@ -2,7 +2,7 @@ import XCTest
 import Quick
 import Nimble
 import InjectableLoggers
-@testable import CanMock
+@testable import MockNStub
 
 class ArraySpec: QuickSpec {
     

@@ -1,13 +1,13 @@
 //
 //  Mock.swift
-//  CanMock_Example
+//  MockNStub_Example
 //
 //  Created by Menno on 11/05/2018.
 //  Copyright © 2018 CocoaPods. All rights reserved.
 //
 
 import Foundation
-import CanMock
+import MockNStub
 
 class MockFailureHandler: Mocking, FailingWithMessageAtLocation {
     

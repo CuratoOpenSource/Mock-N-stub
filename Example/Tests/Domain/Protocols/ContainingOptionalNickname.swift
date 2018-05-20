@@ -1,6 +1,6 @@
 //
 //  ProvidingOptionalNickName.swift
-//  CanMock_Tests
+//  MockNStub_Tests
 //
 //  Created by Menno on 20/05/2018.
 //  Copyright © 2018 CocoaPods. All rights reserved.

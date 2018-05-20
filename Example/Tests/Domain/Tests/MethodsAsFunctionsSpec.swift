@@ -1,27 +1,27 @@
 import XCTest
 import Quick
 import Nimble
-import CanMock
+import MockNStub
 
-class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
+class MockTableViewDataSourceUsingFunctionsSpec: QuickSpec {
     
     override func spec() {
         describe("") {
-            
-            var sut: MockTableViewDataSourceUsingSelectors!
+            typealias SUT = MockTableViewDataSourceUsingFunctions
+            var sut: MockTableViewDataSourceUsingFunctions!
             let tableView = UITableView()
             let indexPath = IndexPath()
             var mockFailureHandler: MockFailureHandler!
             
             beforeEach {
-                sut = MockTableViewDataSourceUsingSelectors()
+                sut = MockTableViewDataSourceUsingFunctions()
             }
             
             //MARK: - Mocking
             context("Mocking", {
                 beforeEach {
-                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 0)
-                    sut.given(#selector(sut.tableView(_:cellForRowAt:)), willReturn: UITableViewCell())
+                    sut.given(SUT.Function.tableView_NumberOfRowsInSection, willReturn: 0)
+                    sut.given(SUT.Function.tableView_CellForRowAtIndexPath, willReturn: UITableViewCell())
                 }
                 
                 //MARK: Expecting Failures
@@ -34,7 +34,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Fails when expected methods are not called", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        sut.expect(callToFunction: "tableView(:numberOfRowsInSection:)")
                         
                         //Act
                         sut.verify()
@@ -45,7 +45,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Fails when expected methods are not called", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:cellForRowAt:)))
+                        sut.expect(callToFunction: "tableView(:cellForRowAt:)")
                         
                         //Act
                         sut.verify()
@@ -56,8 +56,8 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Fails when expected methods are not called", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:cellForRowAt:)))
-                        sut.expect(callToSelector: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        sut.expect(callToFunction: SUT.Function.tableView_CellForRowAtIndexPath)
+                        sut.expect(callToFunction: SUT.Function.tableView_NumberOfRowsInSection)
                         _ = sut.tableView(tableView, cellForRowAt: indexPath)
                         
                         //Act
@@ -69,7 +69,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Fails when expected methods are not called with arguments that don't match", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
+                        sut.expect(callToFunction: SUT.Function.tableView_NumberOfRowsInSection, withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
                             return args.0 === tableView && args.1 == 42
                         }))
                         _ = sut.tableView(tableView, numberOfRowsInSection: 22)
@@ -83,7 +83,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Fails when expected methods are called with incorrect matcher type", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int, Any)) -> Bool in
+                        sut.expect(callToFunction: SUT.Function.tableView_NumberOfRowsInSection, withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int, Any)) -> Bool in
                             return args.0 === tableView && args.1 == 42
                         }))
                         _ = sut.tableView(tableView, numberOfRowsInSection: 42)
@@ -101,7 +101,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Doesn't fail when expected methods are called", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        sut.expect(callToFunction: SUT.Function.tableView_NumberOfRowsInSection)
                         
                         //Act
                         _ = sut.tableView(tableView, numberOfRowsInSection: 42)
@@ -112,7 +112,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Doesn't fail when expected methods are called", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:cellForRowAt:)))
+                        sut.expect(callToFunction: SUT.Function.tableView_CellForRowAtIndexPath)
                         
                         //Act
                         _ = sut.tableView(tableView, cellForRowAt: indexPath)
@@ -123,8 +123,8 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Doesn't fail when expected methods are called", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:cellForRowAt:)))
-                        sut.expect(callToSelector: #selector(sut.tableView(_:numberOfRowsInSection:)))
+                        sut.expect(callToFunction: SUT.Function.tableView_CellForRowAtIndexPath)
+                        sut.expect(callToFunction: SUT.Function.tableView_NumberOfRowsInSection)
                         
                         //Act
                         _ = sut.tableView(tableView, cellForRowAt: indexPath)
@@ -136,7 +136,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     
                     it("Doesn't fail when expected methods are called with arguments that match", closure: {
                         //Arrange
-                        sut.expect(callToSelector: #selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
+                        sut.expect(callToFunction: SUT.Function.tableView_NumberOfRowsInSection, withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
                             return args.0 === tableView && args.1 == 42
                         }))
                         
@@ -151,30 +151,29 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
             
             //MARK: - Stubbing
             context("Stubbing", {
-                
                 it("Provides the correct returnValue", closure: {
                     //Arrange
-                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 42)
+                    sut.given(SUT.Function.tableView_NumberOfRowsInSection, willReturn: 42)
                     
                     //Assert
-                    expect(sut.tableView(tableView, numberOfRowsInSection: 2)).to(equal(42))
+                    expect(sut.tableView(tableView, numberOfRowsInSection: 5)).to(equal(42))
                 })
                 
                 it("Provides the correct returnValue", closure: {
                     //Arrange
-                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 10)
-                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), willReturn: 42)
+                    sut.given(SUT.Function.tableView_NumberOfRowsInSection, willReturn: 10)
+                    sut.given(SUT.Function.tableView_NumberOfRowsInSection, willReturn: 42)
                     
                     //Assert
-                    expect(sut.tableView(tableView, numberOfRowsInSection: 2)).to(equal(42))
+                    expect(sut.tableView(tableView, numberOfRowsInSection: 6)).to(equal(42))
                 })
                 
                 it("Provides the correct returnValue", closure: {
                     //Arrange
-                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
+                    sut.given(SUT.Function.tableView_NumberOfRowsInSection, withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
                         args.1 == 1
                     }), willReturn: 22)
-                    sut.given(#selector(sut.tableView(_:numberOfRowsInSection:)), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
+                    sut.given(SUT.Function.tableView_NumberOfRowsInSection, withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
                         args.1 == 2
                     }), willReturn: 42)
                     

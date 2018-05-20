@@ -1,12 +1,12 @@
 use_frameworks!
 
-target 'CanMock_Example' do
-  pod 'CanMock', :path => '../'
+target 'MockNStub_Example' do
+  pod 'MockNStub', :path => '../'
 
-  target 'CanMock_Tests' do
+  target 'MockNStub_Tests' do
     inherit! :search_paths
 
-    pod 'Quick'
-    pod 'Nimble'
+    pod 'Quick', '~> 1.2.0'
+    pod 'Nimble', '~> 7.0.2'
   end
 end

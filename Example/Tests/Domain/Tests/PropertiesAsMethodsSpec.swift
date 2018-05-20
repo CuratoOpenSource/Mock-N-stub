@@ -1,22 +1,22 @@
 import XCTest
 import Quick
 import Nimble
-import CanMock
+import MockNStub
 
-class PropertiesAsSelectorsSpec: QuickSpec {
+class PropertiesAsMethodsSpec: QuickSpec {
     
     override func spec() {
         given("Mock with full name and optional nickname") {
-            var sut: MockContainingFullnameAndOptionalNicknameUsingSelectors!
+            var sut: MockContainingFullnameAndOptionalNicknameUsingFunctions!
 
             //MARK: Stubbing
             beforeEach {
-                sut = MockContainingFullnameAndOptionalNicknameUsingSelectors()
+                sut = MockContainingFullnameAndOptionalNicknameUsingFunctions()
             }
             
             when("fullName is stubbed", closure: {
                 beforeEach {
-                    sut.given(#selector(getter: sut.fullName), willReturn: "Taylor Swift")
+                    sut.given("fullName", willReturn: "Taylor Swift")
                 }
                 
                 then("it provides correct fullName", closure: {
@@ -30,7 +30,7 @@ class PropertiesAsSelectorsSpec: QuickSpec {
             
             when("nickname is stubbed", closure: {
                 beforeEach {
-                    sut.given(#selector(getter: sut.nickname), willReturn: "TS")
+                    sut.given("nickname", willReturn: "TS")
                 }
                 
                 then("it provides correct nickName", closure: {
@@ -46,7 +46,7 @@ class PropertiesAsSelectorsSpec: QuickSpec {
 
                 and("that fullName is expected to be set", closure: {
                     beforeEach {
-                        sut.expect(callToSelector: #selector(setter: sut.fullName), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: String) -> Bool in
+                        sut.expect(callToFunction: "fullName", withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: String) -> Bool in
                             return args == "Other Name"
                         }))
                     }
@@ -65,7 +65,7 @@ class PropertiesAsSelectorsSpec: QuickSpec {
                     
                     and("nil is expected to be set", closure: {
                         beforeEach {
-                            sut.expect(callToSelector: #selector(setter: sut.nickname), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: String?) -> Bool in
+                            sut.expect(callToFunction: "nickname", withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: String?) -> Bool in
                                 return args == nil
                             }))
                         }
@@ -83,7 +83,7 @@ class PropertiesAsSelectorsSpec: QuickSpec {
                     
                     and("that nickname expected to be set", closure: {
                         beforeEach {
-                            sut.expect(callToSelector: #selector(setter: sut.nickname), withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: String?) -> Bool in
+                            sut.expect(callToFunction: "nickname", withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: String?) -> Bool in
                                 return args == "Other Nickname"
                             }))
                         }
