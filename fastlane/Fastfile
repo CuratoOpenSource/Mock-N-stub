@@ -37,7 +37,7 @@ platform :ios do
 
   		pod_push
 
-      github_release = set_github_release(repository_name: "mennolovink/MockNStub",
+      github_release = set_github_release(repository_name: "mennolovink/Mock-N-stub",
                                           api_token: ENV["GITHUB_TOKEN"],
                                           name: version,
                                           tag_name: version,
