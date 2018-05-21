@@ -1,5 +1,6 @@
 public protocol Mocking: Stubbing, ProvidingMutableCalls, ProvidingMutableVerifications, ProvidingFailureHandler {}
 
+//MARK: Pubblic
 public extension Mocking {
     
     // MARK: Selectors
@@ -58,7 +59,7 @@ public extension Mocking {
     }
 }
 
-//MARK: Private Methods
+//MARK: Private
 private extension Mocking {
     
     func registerCall(to function: String, withArguments arguments: [Any?]) {

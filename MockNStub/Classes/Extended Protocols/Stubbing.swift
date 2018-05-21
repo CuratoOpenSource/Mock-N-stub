@@ -1,5 +1,6 @@
 public protocol Stubbing: ProvidingMutableCallValues {}
 
+//MARK: Public
 public extension Stubbing {
     
     // MARK: Selectors
@@ -21,7 +22,13 @@ public extension Stubbing {
     }
 }
 
+//MARK: Internal
 internal extension Stubbing {
+    
+    // MARK: Selectors
+    func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
+        return valueForSelector(selector, with: arguments.tuple)
+    }
     
     func valueForSelector<ReturnType>(_ selector: Selector, with arguments: Any) -> ReturnType? {
         guard let nonNilValue = callValues.filter({ $0.selector == selector }).filter({ $0.matcher.match(arguments: arguments) }).compactMap({ $0.value }).last else {
@@ -45,6 +52,11 @@ internal extension Stubbing {
         }
         
         return valueOfExpectedType
+    }
+    
+    // MARK: Functions
+    func didCallFunction<ReturnType>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType? {
+        return valueForFunction(function, with: arguments.tuple)
     }
     
     func valueForFunction<ReturnType>(_ function: String = #function, with arguments: Any) -> ReturnType? {
