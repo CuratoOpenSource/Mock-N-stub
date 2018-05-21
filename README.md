@@ -1,9 +1,8 @@
-# MockNStub
+# Mock 'N Stub
 
-[![CI Status](https://img.shields.io/travis/mennolovink/MockNStub.svg?style=flat)](https://travis-ci.org/mennolovink/MockNStub)
-[![Version](https://img.shields.io/cocoapods/v/MockNStub.svg?style=flat)](https://cocoapods.org/pods/MockNStub)
-[![License](https://img.shields.io/cocoapods/l/MockNStub.svg?style=flat)](https://cocoapods.org/pods/MockNStub)
-[![Platform](https://img.shields.io/cocoapods/p/MockNStub.svg?style=flat)](https://cocoapods.org/pods/MockNStub)
+ [![Version](http://img.shields.io/cocoapods/v/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![Platform](http://img.shields.io/cocoapods/p/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![License](http://img.shields.io/cocoapods/l/MockNStub.svg?style=flat)](LICENSE)
+
+Code completed Mocking and Stubbing for Swift protocols and classes
 
 ## Example
 
