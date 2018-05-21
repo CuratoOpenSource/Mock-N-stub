@@ -1,0 +1,6 @@
+framework module MockNStub {
+  umbrella header "MockNStub-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_MockNStub_Example {
+  umbrella header "Pods-MockNStub_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
