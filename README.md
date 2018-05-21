@@ -51,7 +51,7 @@ Please note that neither the `Mocking` or `Stubbing` protocols rely on **one** w
 ```Swift
 class UITableViewDataSourceStub: Stubbing, UITableViewDataSource {
 
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return didCallSelector(#selector(tableView(_:numberOfRowsInSection:)), withArguments: tableView, section)!
     }
     
@@ -69,7 +69,7 @@ Notes:
 ```Swift
 class UITableViewDataSourceStub: Stubbing, UITableViewDataSource {
 
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return didCallFunction(withArguments: tableView, section)!
     }
     
