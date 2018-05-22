@@ -25,7 +25,6 @@ The implementations in MockNStub are completely protocol oriented. This allows t
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mennolovink' => 'mclovink@me.com' }
   s.source           = { :git => 'https://github.com/mennolovink/Mock-N-stub.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/swiftMclovink'
 
   s.ios.deployment_target = '8.0'
 
