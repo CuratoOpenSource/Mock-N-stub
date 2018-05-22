@@ -1,120 +1,120 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='MockNStub_Tests.xctest' tests='138' failures='0'>
   <testsuite name='MockNStub_Tests.ArraySpec' tests='102' failures='0'>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_array__with_0_elements__When_tuple_is_called__Then_provided_tuple_is_empty_tuple' time='0.003'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_1_element__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_2_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_2_elements__When_tuple_is_called__Then_tuple_has_2_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_array__with_0_elements__When_tuple_is_called__Then_provided_tuple_is_empty_tuple' time='0.009'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_1_element__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.005'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_2_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.004'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_2_elements__When_tuple_is_called__Then_tuple_has_2_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_3_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_3_elements__When_tuple_is_called__Then_tuple_has_3_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_3_elements__When_tuple_is_called__Then_tuple_has_3_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_4_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_4_elements__When_tuple_is_called__Then_tuple_has_4_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_5_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_4_elements__When_tuple_is_called__Then_tuple_has_4_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_5_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_5_elements__When_tuple_is_called__Then_tuple_has_5_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_6_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_6_elements__When_tuple_is_called__Then_tuple_has_6_elements' time='0.005'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_7_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_6_elements__When_tuple_is_called__Then_tuple_has_6_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_7_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_7_elements__When_tuple_is_called__Then_tuple_has_7_elements' time='0.000'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_8_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.009'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_8_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_8_elements__When_tuple_is_called__Then_tuple_has_8_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_9_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_9_elements__When_tuple_is_called__Then_tuple_has_9_elements' time='0.006'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_9_elements__When_tuple_is_called__Then_tuple_has_9_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_10_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_10_elements__When_tuple_is_called__Then_tuple_has_10_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_11_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_11_elements__When_tuple_is_called__Then_tuple_has_11_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_11_elements__When_tuple_is_called__Then_tuple_has_11_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_12_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_12_elements__When_tuple_is_called__Then_tuple_has_12_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_13_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_13_elements__When_tuple_is_called__Then_tuple_has_13_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_14_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_14_elements__When_tuple_is_called__Then_tuple_has_14_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_14_elements__When_tuple_is_called__Then_tuple_has_14_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_15_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_15_elements__When_tuple_is_called__Then_tuple_has_15_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_16_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_16_elements__When_tuple_is_called__Then_tuple_has_16_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_16_elements__When_tuple_is_called__Then_tuple_has_16_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_17_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_17_elements__When_tuple_is_called__Then_tuple_has_17_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_17_elements__When_tuple_is_called__Then_tuple_has_17_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_18_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_18_elements__When_tuple_is_called__Then_tuple_has_18_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_19_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_19_elements__When_tuple_is_called__Then_tuple_has_19_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_20_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_20_elements__When_tuple_is_called__Then_tuple_has_20_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_20_elements__When_tuple_is_called__Then_tuple_has_20_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_21_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_21_elements__When_tuple_is_called__Then_tuple_has_21_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_21_elements__When_tuple_is_called__Then_tuple_has_21_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_22_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_22_elements__When_tuple_is_called__Then_tuple_has_22_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_23_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_23_elements__When_tuple_is_called__Then_tuple_has_23_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_23_elements__When_tuple_is_called__Then_tuple_has_23_elements' time='0.002'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_24_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_24_elements__When_tuple_is_called__Then_tuple_has_24_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.010'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_has_24_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_it_logs_warning_to_logger' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_1_element__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.019'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_has_24_elements' time='0.059'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_a_string_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_it_logs_warning_to_logger' time='0.002'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_1_element__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_2_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_2_elements__When_tuple_is_called__Then_tuple_has_2_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_3_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.002'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_3_elements__When_tuple_is_called__Then_tuple_has_3_elements' time='0.000'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_4_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.000'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_4_elements__When_tuple_is_called__Then_tuple_has_4_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_2_elements__When_tuple_is_called__Then_tuple_has_2_elements' time='0.008'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_3_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_3_elements__When_tuple_is_called__Then_tuple_has_3_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_4_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_4_elements__When_tuple_is_called__Then_tuple_has_4_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_5_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_5_elements__When_tuple_is_called__Then_tuple_has_5_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_6_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_6_elements__When_tuple_is_called__Then_tuple_has_6_elements' time='0.004'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_7_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_7_elements__When_tuple_is_called__Then_tuple_has_7_elements' time='0.000'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_8_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.011'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_6_elements__When_tuple_is_called__Then_tuple_has_6_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_7_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_7_elements__When_tuple_is_called__Then_tuple_has_7_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_8_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.002'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_8_elements__When_tuple_is_called__Then_tuple_has_8_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_9_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_9_elements__When_tuple_is_called__Then_tuple_has_9_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_9_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.008'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_9_elements__When_tuple_is_called__Then_tuple_has_9_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_10_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_10_elements__When_tuple_is_called__Then_tuple_has_10_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_10_elements__When_tuple_is_called__Then_tuple_has_10_elements' time='0.004'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_11_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_11_elements__When_tuple_is_called__Then_tuple_has_11_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_12_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_12_elements__When_tuple_is_called__Then_tuple_has_12_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_12_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.004'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_12_elements__When_tuple_is_called__Then_tuple_has_12_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_13_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_13_elements__When_tuple_is_called__Then_tuple_has_13_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_13_elements__When_tuple_is_called__Then_tuple_has_13_elements' time='0.007'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_14_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_14_elements__When_tuple_is_called__Then_tuple_has_14_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_15_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_15_elements__When_tuple_is_called__Then_tuple_has_15_elements' time='0.000'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_16_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.002'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_15_elements__When_tuple_is_called__Then_tuple_has_15_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_16_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_16_elements__When_tuple_is_called__Then_tuple_has_16_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_17_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_17_elements__When_tuple_is_called__Then_tuple_has_17_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_17_elements__When_tuple_is_called__Then_tuple_has_17_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_18_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_18_elements__When_tuple_is_called__Then_tuple_has_18_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_19_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_19_elements__When_tuple_is_called__Then_tuple_has_19_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_19_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.002'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_19_elements__When_tuple_is_called__Then_tuple_has_19_elements' time='0.004'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_20_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_20_elements__When_tuple_is_called__Then_tuple_has_20_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_21_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_21_elements__When_tuple_is_called__Then_tuple_has_21_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_22_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_22_elements__When_tuple_is_called__Then_tuple_has_22_elements' time='0.000'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_22_elements__When_tuple_is_called__Then_tuple_has_22_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_23_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_23_elements__When_tuple_is_called__Then_tuple_has_23_elements' time='0.000'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_24_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_24_elements__When_tuple_is_called__Then_tuple_has_24_elements' time='0.000'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_has_24_elements' time='0.004'/>
-    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_it_logs_warning_to_logger' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.002'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_tuple_has_24_elements' time='0.001'/>
+    <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_int_array__with_unsupported__25___amount_of_elements__When_tuple_is_called__Then_it_logs_warning_to_logger' time='0.010'/>
     <testcase classname='MockNStub_Tests.ArraySpec' name='Given_an_array_with_ints_and_strings__When_tuple_is_called__Then_tuple_contains_correct_elements' time='0.001'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' tests='12' failures='0'>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called' time='0.006'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called' time='0.020'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_2' time='0.002'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_3' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_with_arguments_that_don_t_match' time='0.120'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_3' time='0.002'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_with_arguments_that_don_t_match' time='0.002'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_called_with_incorrect_matcher_type' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_2' time='0.001'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_2' time='0.002'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_3' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_with_arguments_that_match' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue' time='0.004'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_with_arguments_that_match' time='0.018'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue' time='0.007'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue_2' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue_3' time='0.001'/>
   </testsuite>
@@ -124,28 +124,28 @@
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_3' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_with_arguments_that_don_t_match' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_called_with_incorrect_matcher_type' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called' time='0.001'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called' time='0.004'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_2' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_3' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_with_arguments_that_match' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Stubbing__Provides_the_correct_returnValue' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Stubbing__Provides_the_correct_returnValue_2' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Stubbing__Provides_the_correct_returnValue_3' time='0.001'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingSelectorsSpec' name='__Stubbing__Provides_the_correct_returnValue_3' time='0.002'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.PropertiesAsMethodsSpec' tests='6' failures='0'>
     <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then_it_provides_correct_fullName' time='0.001'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then_it_provides_correct_nickname' time='0.004'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_stubbed__Then_it_provides_correct_nickName' time='0.000'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then_it_provides_correct_nickname' time='0.009'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_stubbed__Then_it_provides_correct_nickName' time='0.001'/>
     <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_set__And_that_fullName_is_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.001'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_nil__And_nil_is_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.001'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_non_nil_string__And_that_nickname_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.000'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_nil__And_nil_is_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.000'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_non_nil_string__And_that_nickname_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.001'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.PropertiesAsSelectorsSpec' tests='6' failures='0'>
     <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then_it_provides_correct_fullName' time='0.001'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then_it_provides_correct_nickname' time='0.013'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_stubbed__Then_it_provides_correct_nickName' time='0.001'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_set__And_that_fullName_is_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.075'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_nil__And_nil_is_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.000'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_non_nil_string__And_that_nickname_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.001'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then_it_provides_correct_nickname' time='0.002'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_stubbed__Then_it_provides_correct_nickName' time='0.000'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_fullName_is_set__And_that_fullName_is_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.000'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_nil__And_nil_is_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.001'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsSelectorsSpec' name='Given_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_non_nil_string__And_that_nickname_expected_to_be_set__Then_it_doesnt_fail_verification' time='0.000'/>
   </testsuite>
 </testsuites>

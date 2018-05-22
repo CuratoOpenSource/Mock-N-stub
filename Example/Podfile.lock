@@ -1,6 +1,6 @@
 PODS:
   - InjectableLoggers (1.1.0)
-  - MockNStub (0.1.0):
+  - MockNStub (0.1.1):
     - InjectableLoggers (~> 1)
   - Nimble (7.0.3)
   - Quick (1.2.0)
@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   InjectableLoggers: 4c597e6e6214d64e8e840238ec9e1a4cc70da60a
-  MockNStub: 1c37be83312a758cedf75bae1d65da2fd1aa059d
+  MockNStub: 33c73491ff35c9c3db5378c3b2ba5dfcaf1cc6a5
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
