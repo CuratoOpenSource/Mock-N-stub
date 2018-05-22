@@ -4,6 +4,10 @@ public protocol Stubbing: ProvidingMutableCallValues {}
 public extension Stubbing {
     
     // MARK: Selectors
+    func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
+        return valueForSelector(selector, with: arguments.tuple)
+    }
+    
     func given(_ selector: Selector, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
         callValues.append(CallValue(selector: selector, value: value, matcher: matcher))
     }
@@ -13,6 +17,10 @@ public extension Stubbing {
     }
     
     // MARK: Functions
+    func didCallFunction<ReturnType>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType? {
+        return valueForFunction(function, with: arguments.tuple)
+    }
+    
     func given(_ function: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
         callValues.append(CallValue(function: function, value: value, matcher: matcher))
     }
@@ -26,10 +34,6 @@ public extension Stubbing {
 internal extension Stubbing {
     
     // MARK: Selectors
-    func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
-        return valueForSelector(selector, with: arguments.tuple)
-    }
-    
     func valueForSelector<ReturnType>(_ selector: Selector, with arguments: Any) -> ReturnType? {
         guard let nonNilValue = callValues.filter({ $0.selector == selector }).filter({ $0.matcher.match(arguments: arguments) }).compactMap({ $0.value }).last else {
             if !isOptional(ReturnType.self) {
@@ -55,10 +59,6 @@ internal extension Stubbing {
     }
     
     // MARK: Functions
-    func didCallFunction<ReturnType>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType? {
-        return valueForFunction(function, with: arguments.tuple)
-    }
-    
     func valueForFunction<ReturnType>(_ function: String = #function, with arguments: Any) -> ReturnType? {
         guard let nonNilValue = callValues.filter({ $0.function == function }).filter({ $0.matcher.match(arguments: arguments) }).compactMap({ $0.value }).last else {
             if !isOptional(ReturnType.self) {
