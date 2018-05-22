@@ -63,7 +63,7 @@ class UITableViewDataSourceStub: Stubbing, UITableViewDataSource {
 Notes:
 
 * Everything inside `#selector()` is code completed.
-* [No need](###Unwapping-return value-of-didCall()) to worry about force unwrapping the optional value that's returned.
+* [No need](###unwapping-return-value-of-didCall()) to worry about force unwrapping the optional value that's returned.
 
 #### Using function names
 ```Swift
