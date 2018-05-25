@@ -26,7 +26,7 @@ All created mocks conform to the `Mocking` protocol and since `Mocking` conforms
 
 Wenever you feel that an explicit stub needs to support `Mocking`, all you need to do is change it's conformance from `Stubbing` to `Mocking`. 
 
-## Class Mocks and Protocol share the exact same interface
+## Class and Protocol Mocks/Stubs share the exact same interface
 The implementations in MockNStub are completely protocol oriented. This allows the interface of class and protocol mocks (and stubs) to be exactly the same. All explicit stubs conform to `Stubbing` and all mocks conform to `Mocking`. There's never a need to inherit from a concrete type from this library.
 
 ## Two ways of creating fakes
