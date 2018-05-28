@@ -8,9 +8,7 @@ Code completed Mocking and Stubbing for Swift protocols and classes.
 
 To see the example project, run the following in your terminal:
 
-```
-pod try MockNStub
-```
+`pod try MockNStub`
 
 ## Setup
 
@@ -28,7 +26,7 @@ All created mocks conform to the `Mocking` protocol and since `Mocking` conforms
 
 Wenever you feel that an explicit stub needs to support `Mocking`, all you need to do is change it's conformance from `Stubbing` to `Mocking`. 
 
-## Class Mocks and Protocol share the exact same interface
+## Class and Protocol Mocks/Stubs share the exact same interface
 The implementations in MockNStub are completely protocol oriented. This allows the interface of class and protocol mocks (and stubs) to be exactly the same. All explicit stubs conform to `Stubbing` and all mocks conform to `Mocking`. There's never a need to inherit from a concrete type from this library.
 
 ## Two ways of creating fakes
@@ -268,6 +266,15 @@ Notes:
 	* Every force unwrap of a nil value is known before it occurs and will cause detailed diagnosics to be logged to the console which shows what was expected to happen vs. what actually happened:![Screenshot Missing](Art/LogWhenForceUnwappingReturnValue.png)
 * It some cases it can still be helpful to prevent a force unwrapped nil from happening by writing something like `return didCallFunction() ?? 0` instead.
 	* This will have no effect on return values that have been provided using the `given..` methods.	
+
+## There's more to come..
+
+### Planned features
+
+Can be viewed in the [roadmap](https://github.com/mennolovink/Mock-N-stub/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap).
+### Anything missing?
+
+Create a [feature request](https://github.com/mennolovink/Mock-N-stub/issues/new) and it will likely be picked up.
 
 ## Installation
 
