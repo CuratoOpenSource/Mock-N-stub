@@ -1,3 +1,5 @@
+import ArrayPlusTuple
+
 public protocol Mocking: Stubbing, ProvidingMutableCalls, ProvidingMutableVerifications, ProvidingFailureHandler {}
 
 //MARK: Pubblic
