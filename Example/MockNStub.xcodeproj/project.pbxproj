@@ -13,9 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		D516FFB493241E36CDB3A7EE /* Pods_MockNStub_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693CB70A320FA793458D6E1A /* Pods_MockNStub_Tests.framework */; };
-		DEC9DB5D20B20D4400ABF5D7 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB3D20B20D2900ABF5D7 /* ArraySpec.swift */; };
 		DEC9DB5E20B20D4400ABF5D7 /* MockFailureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB3F20B20D2900ABF5D7 /* MockFailureHandler.swift */; };
-		DEC9DB5F20B20D4400ABF5D7 /* GivenWhenThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4120B20D2900ABF5D7 /* GivenWhenThen.swift */; };
 		DEC9DB6020B20D4400ABF5D7 /* MethodsAsFunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */; };
 		DEC9DB6120B20D4400ABF5D7 /* MethodsAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4520B20D2900ABF5D7 /* MethodsAsSelectorsSpec.swift */; };
 		DEC9DB6220B20D4400ABF5D7 /* PropertiesAsMethodsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4620B20D2900ABF5D7 /* PropertiesAsMethodsSpec.swift */; };
@@ -58,9 +56,7 @@
 		8FAC6A347FB989E7BEDA1CC4 /* Pods-MockNStub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CFA021790ACC60DB25E46F57 /* Pods-MockNStub_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DE79936420B37C0E00EFB313 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = ../fastlane/Fastfile; sourceTree = "<group>"; };
-		DEC9DB3D20B20D2900ABF5D7 /* ArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 		DEC9DB3F20B20D2900ABF5D7 /* MockFailureHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFailureHandler.swift; sourceTree = "<group>"; };
-		DEC9DB4120B20D2900ABF5D7 /* GivenWhenThen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GivenWhenThen.swift; sourceTree = "<group>"; };
 		DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodsAsFunctionsSpec.swift; sourceTree = "<group>"; };
 		DEC9DB4520B20D2900ABF5D7 /* MethodsAsSelectorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodsAsSelectorsSpec.swift; sourceTree = "<group>"; };
 		DEC9DB4620B20D2900ABF5D7 /* PropertiesAsMethodsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesAsMethodsSpec.swift; sourceTree = "<group>"; };
@@ -169,19 +165,9 @@
 		DEC9DB3B20B20D2900ABF5D7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				DEC9DB3C20B20D2900ABF5D7 /* Tests */,
 				DEC9DB3E20B20D2900ABF5D7 /* Fakes */,
-				DEC9DB4020B20D2900ABF5D7 /* Functions */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		DEC9DB3C20B20D2900ABF5D7 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				DEC9DB3D20B20D2900ABF5D7 /* ArraySpec.swift */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		DEC9DB3E20B20D2900ABF5D7 /* Fakes */ = {
@@ -190,14 +176,6 @@
 				DEC9DB3F20B20D2900ABF5D7 /* MockFailureHandler.swift */,
 			);
 			path = Fakes;
-			sourceTree = "<group>";
-		};
-		DEC9DB4020B20D2900ABF5D7 /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				DEC9DB4120B20D2900ABF5D7 /* GivenWhenThen.swift */,
-			);
-			path = Functions;
 			sourceTree = "<group>";
 		};
 		DEC9DB4220B20D2900ABF5D7 /* Domain */ = {
@@ -373,11 +351,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/QuickGWT/QuickGWT.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickGWT.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,11 +389,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ArrayPlusTuple/ArrayPlusTuple.framework",
 				"${BUILT_PRODUCTS_DIR}/InjectableLoggers/InjectableLoggers.framework",
 				"${BUILT_PRODUCTS_DIR}/MockNStub/MockNStub.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArrayPlusTuple.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InjectableLoggers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MockNStub.framework",
 			);
@@ -458,12 +440,10 @@
 			files = (
 				DEC9DB6220B20D4400ABF5D7 /* PropertiesAsMethodsSpec.swift in Sources */,
 				DEC9DB6720B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift in Sources */,
-				DEC9DB5F20B20D4400ABF5D7 /* GivenWhenThen.swift in Sources */,
 				DEC9DB6620B20D4400ABF5D7 /* MockTableViewDataSourceUsingSelectors.swift in Sources */,
 				DEC9DB6920B20D4400ABF5D7 /* ContainingOptionalNickname.swift in Sources */,
 				DEC9DB6120B20D4400ABF5D7 /* MethodsAsSelectorsSpec.swift in Sources */,
 				DEC9DB6820B20D4400ABF5D7 /* ContainingFullName.swift in Sources */,
-				DEC9DB5D20B20D4400ABF5D7 /* ArraySpec.swift in Sources */,
 				DEC9DB6320B20D4400ABF5D7 /* PropertiesAsSelectorsSpec.swift in Sources */,
 				DEC9DB6520B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
 				DEC9DB6420B20D4400ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift in Sources */,

@@ -1,5 +1,6 @@
 import XCTest
 import Quick
+import QuickGWT
 import Nimble
 import MockNStub
 
