@@ -1,31 +1,41 @@
 PODS:
-  - InjectableLoggers (1.1.0)
-  - MockNStub (0.1.1):
+  - ArrayPlusTuple (1.0.0):
+    - InjectableLoggers (~> 1.2)
+  - InjectableLoggers (1.2.0)
+  - MockNStub (0.2.0):
+    - ArrayPlusTuple (~> 1)
     - InjectableLoggers (~> 1)
   - Nimble (7.0.3)
-  - Quick (1.2.0)
+  - Quick (1.3.0)
+  - QuickGWT (1.0.0):
+    - Quick (~> 1.3)
 
 DEPENDENCIES:
   - MockNStub (from `../`)
   - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
+  - Quick (~> 1.3)
+  - QuickGWT (~> 1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ArrayPlusTuple
     - InjectableLoggers
     - Nimble
     - Quick
+    - QuickGWT
 
 EXTERNAL SOURCES:
   MockNStub:
     :path: "../"
 
 SPEC CHECKSUMS:
-  InjectableLoggers: 4c597e6e6214d64e8e840238ec9e1a4cc70da60a
-  MockNStub: 33c73491ff35c9c3db5378c3b2ba5dfcaf1cc6a5
+  ArrayPlusTuple: 9e5d3c9354518dc7315ddf9cff0822b967ae6166
+  InjectableLoggers: f63523bbb55c5b41ba7cb6a053f5de7aca20a009
+  MockNStub: d11fc9ab0d5ee367c2086cafe5bd6be99890036e
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
+  QuickGWT: 1c95a0ec7bfb87f7afba8d6ad92af6c526402d6e
 
-PODFILE CHECKSUM: 2b3fdb6f13c543be901590722620d822229d3d8b
+PODFILE CHECKSUM: a7d186fdc724001ec1d1c005e979795aca2b3aa8
 
 COCOAPODS: 1.5.2

@@ -1,0 +1,6 @@
+framework module QuickGWT {
+  umbrella header "QuickGWT-umbrella.h"
+
+  export *
+  module * { export * }
+}
