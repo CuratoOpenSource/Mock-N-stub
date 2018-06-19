@@ -25,6 +25,8 @@
 		DEC9DB6820B20D4400ABF5D7 /* ContainingFullName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4E20B20D2A00ABF5D7 /* ContainingFullName.swift */; };
 		DEC9DB6920B20D4400ABF5D7 /* ContainingOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4F20B20D2A00ABF5D7 /* ContainingOptionalNickname.swift */; };
 		DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700420D9283600BE6062 /* MethodIDSpec.swift */; };
+		DEF1700720D9423E00BE6062 /* DefaultStubValuesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700620D9423D00BE6062 /* DefaultStubValuesSpec.swift */; };
+		DEF1700C20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700B20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift */; };
 		E24F443E8DE78433A7E1CBF4 /* Pods_MockNStub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED608F2044267E7BE28ABA15 /* Pods_MockNStub_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		DEC9DB4E20B20D2A00ABF5D7 /* ContainingFullName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainingFullName.swift; sourceTree = "<group>"; };
 		DEC9DB4F20B20D2A00ABF5D7 /* ContainingOptionalNickname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainingOptionalNickname.swift; sourceTree = "<group>"; };
 		DEF1700420D9283600BE6062 /* MethodIDSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodIDSpec.swift; sourceTree = "<group>"; };
+		DEF1700620D9423D00BE6062 /* DefaultStubValuesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStubValuesSpec.swift; sourceTree = "<group>"; };
+		DEF1700B20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubWithAllTypesThatHaveDefaultStubValue.swift; sourceTree = "<group>"; };
 		ED608F2044267E7BE28ABA15 /* Pods_MockNStub_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockNStub_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,6 +197,7 @@
 		DEC9DB4320B20D2900ABF5D7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DEF1700620D9423D00BE6062 /* DefaultStubValuesSpec.swift */,
 				DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */,
 				DEF1700420D9283600BE6062 /* MethodIDSpec.swift */,
 				DEC9DB4520B20D2900ABF5D7 /* MethodsAsSelectorsSpec.swift */,
@@ -209,6 +214,7 @@
 				DEC9DB4A20B20D2A00ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift */,
 				DEC9DB4B20B20D2A00ABF5D7 /* MockTableViewDataSourceUsingSelectors.swift */,
 				DEC9DB4C20B20D2A00ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */,
+				DEF1700B20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				DEF1700C20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +458,7 @@
 				DEC9DB6520B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
 				DEC9DB6420B20D4400ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
 				DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */,
+				DEF1700720D9423E00BE6062 /* DefaultStubValuesSpec.swift in Sources */,
 				DEC9DB5E20B20D4400ABF5D7 /* MockFailureHandler.swift in Sources */,
 				DEC9DB6020B20D4400ABF5D7 /* MethodsAsFunctionsSpec.swift in Sources */,
 			);
