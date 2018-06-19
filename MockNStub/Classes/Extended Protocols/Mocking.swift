@@ -11,7 +11,7 @@ public extension Mocking {
     }
     
     func didCallSelector(_ selector: Selector, withArguments arguments: Any?...) {
-        registerCall(to: selector, withArguments: arguments)
+        registerCall(to: .selector(selector), withArguments: arguments)
     }
     
     func didCallSelector<ReturnType>(_ selector: Selector) -> ReturnType? {
@@ -19,12 +19,12 @@ public extension Mocking {
     }
     
     func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
-        registerCall(to: selector, withArguments: arguments)
-        return valueForSelector(selector, with: arguments.tuple)
+        registerCall(to: .selector(selector), withArguments: arguments)
+        return value(forMethodWithID: .selector(selector), with: arguments)
     }
     
     func expect(callToSelector selector: Selector, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
-        verifications.append(Verification(selector: selector, matcher: matcher))
+        verifications.append(Verification(methodID: .selector(selector), matcher: matcher))
     }
     
     // MARK: Functions
@@ -33,7 +33,7 @@ public extension Mocking {
     }
     
     func didCallFunction(_ function: String = #function, withArguments arguments: Any?...) {
-        registerCall(to: function, withArguments: arguments)
+        registerCall(to: .name(function), withArguments: arguments)
     }
     
     func didCallFunction<ReturnType>(_ function: String = #function) -> ReturnType? {
@@ -41,20 +41,18 @@ public extension Mocking {
     }
     
     func didCallFunction<ReturnType>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType? {
-        registerCall(to: function, withArguments: arguments)
-        return valueForFunction(function, with: arguments.tuple)
+        registerCall(to: .name(function), withArguments: arguments)
+        return value(forMethodWithID: .name(function), with: arguments)
     }
     
     func expect(callToFunction function: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
-        verifications.append(Verification(function: function, matcher: matcher))
+        verifications.append(Verification(methodID: .name(function), matcher: matcher))
     }
     
     // MARK: Verification
     func verify(inFile file: StaticString = #file, atLine line: UInt = #line) {
         for verification in verifications {
-            if calls.filter({   $0.selector == verification.selector &&
-                                $0.function == verification.function }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
-                
+            if calls.filter({   $0.methodID == verification.methodID }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
                 failureHandler.fail(with: "Could not verify call to `\(methodName(from: verification))`", at: Location(file: file, line: line))
             }
         }
@@ -64,21 +62,16 @@ public extension Mocking {
 //MARK: Private
 private extension Mocking {
     
-    func registerCall(to function: String, withArguments arguments: [Any?]) {
-        calls.append(Call(function: function, arguments: arguments.tuple))
-    }
-    
-    func registerCall(to selector: Selector, withArguments arguments: [Any?]) {
-        calls.append(Call(selector: selector, arguments: arguments.tuple))
+    func registerCall(to methodID: MethodID, withArguments arguments: [Any?]) {
+        calls.append(Call(methodID: methodID, arguments: arguments.tuple))
     }
     
     func methodName(from verification: Verification) -> String {
-        if let selector = verification.selector {
+        switch verification.methodID {
+        case .name(let name):
+            return name
+        case .selector(let selector):
             return "\(selector)"
-        } else if let function = verification.function {
-            return function
-        } else {
-            return ""
         }
     }
 }

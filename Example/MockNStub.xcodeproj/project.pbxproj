@@ -24,6 +24,7 @@
 		DEC9DB6720B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4C20B20D2A00ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */; };
 		DEC9DB6820B20D4400ABF5D7 /* ContainingFullName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4E20B20D2A00ABF5D7 /* ContainingFullName.swift */; };
 		DEC9DB6920B20D4400ABF5D7 /* ContainingOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4F20B20D2A00ABF5D7 /* ContainingOptionalNickname.swift */; };
+		DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700420D9283600BE6062 /* MethodIDSpec.swift */; };
 		E24F443E8DE78433A7E1CBF4 /* Pods_MockNStub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED608F2044267E7BE28ABA15 /* Pods_MockNStub_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		DEC9DB4C20B20D2A00ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingSelectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockContainingFullnameAndOptionalNicknameUsingSelectors.swift; sourceTree = "<group>"; };
 		DEC9DB4E20B20D2A00ABF5D7 /* ContainingFullName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainingFullName.swift; sourceTree = "<group>"; };
 		DEC9DB4F20B20D2A00ABF5D7 /* ContainingOptionalNickname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainingOptionalNickname.swift; sourceTree = "<group>"; };
+		DEF1700420D9283600BE6062 /* MethodIDSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodIDSpec.swift; sourceTree = "<group>"; };
 		ED608F2044267E7BE28ABA15 /* Pods_MockNStub_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockNStub_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */,
+				DEF1700420D9283600BE6062 /* MethodIDSpec.swift */,
 				DEC9DB4520B20D2900ABF5D7 /* MethodsAsSelectorsSpec.swift */,
 				DEC9DB4620B20D2900ABF5D7 /* PropertiesAsMethodsSpec.swift */,
 				DEC9DB4720B20D2900ABF5D7 /* PropertiesAsSelectorsSpec.swift */,
@@ -447,6 +450,7 @@
 				DEC9DB6320B20D4400ABF5D7 /* PropertiesAsSelectorsSpec.swift in Sources */,
 				DEC9DB6520B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
 				DEC9DB6420B20D4400ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
+				DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */,
 				DEC9DB5E20B20D4400ABF5D7 /* MockFailureHandler.swift in Sources */,
 				DEC9DB6020B20D4400ABF5D7 /* MethodsAsFunctionsSpec.swift in Sources */,
 			);
