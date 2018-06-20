@@ -11,12 +11,40 @@ import MockNStub
 
 class StubWithAllTypesThatHaveDefaultStubValue: Stubbing {
     
-    // MARK: String
+    // MARK: Standard types
     func stringUsingFunction() -> String {
         return didCallFunction()
     }
     
     @objc func stringUsingSelector() -> String {
         return didCallSelector(#selector(stringUsingSelector))
+    }
+    
+    func array() -> [Bool] {
+        return didCallFunction()
+    }
+    
+    func dictionary() -> [String: [Bool]] {
+        return didCallFunction()
+    }
+    
+    func set() -> Set<Bool> {
+        return didCallFunction()
+    }
+    
+    func int() -> Int {
+        return didCallFunction()
+    }
+    
+    func bool() -> Bool {
+        return didCallFunction()
+    }
+    
+    func float() -> Float {
+        return didCallFunction()
+    }
+    
+    func double() -> Double {
+        return didCallFunction()
     }
 }
