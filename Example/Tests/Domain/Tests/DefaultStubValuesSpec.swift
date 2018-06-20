@@ -10,27 +10,23 @@ class DefaultStubValuesSpec: QuickSpec {
         
         given("a stub") {
             
-            var sut: StubWithAllTypesThatHaveDefaultStubValue!
-            
-            beforeEach {
-                sut = StubWithAllTypesThatHaveDefaultStubValue()
-            }
+            let sut = StubWithAllTypesThatHaveDefaultStubValue()
             
             when("when asking for a string", closure: {
                 
                 context("using a selector", {
-                    let defaultStubValue = sut.stringUsingSelector()
+                    let value = sut.stringUsingSelector()
                     
                     then("default value is correct", closure: {
-                        expect(defaultStubValue).to(equal(""))
+                        expect(value).to(equal(""))
                     })
                 })
                 
                 context("using a function", {
-                    let defaultStubValue = sut.stringUsingFunction()
-                    
+                    let value = sut.stringUsingFunction()
+
                     then("default value is correct", closure: {
-                        expect(defaultStubValue).to(equal(""))
+                        expect(value).to(equal(""))
                     })
                 })
             })

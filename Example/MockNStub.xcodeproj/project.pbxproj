@@ -26,7 +26,7 @@
 		DEC9DB6920B20D4400ABF5D7 /* ContainingOptionalNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4F20B20D2A00ABF5D7 /* ContainingOptionalNickname.swift */; };
 		DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700420D9283600BE6062 /* MethodIDSpec.swift */; };
 		DEF1700720D9423E00BE6062 /* DefaultStubValuesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700620D9423D00BE6062 /* DefaultStubValuesSpec.swift */; };
-		DEF1700C20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700B20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift */; };
+		DEF1700D20D94CC000BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1700B20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift */; };
 		E24F443E8DE78433A7E1CBF4 /* Pods_MockNStub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED608F2044267E7BE28ABA15 /* Pods_MockNStub_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -440,7 +440,6 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				DEF1700C20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +453,7 @@
 				DEC9DB6920B20D4400ABF5D7 /* ContainingOptionalNickname.swift in Sources */,
 				DEC9DB6120B20D4400ABF5D7 /* MethodsAsSelectorsSpec.swift in Sources */,
 				DEC9DB6820B20D4400ABF5D7 /* ContainingFullName.swift in Sources */,
+				DEF1700D20D94CC000BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift in Sources */,
 				DEC9DB6320B20D4400ABF5D7 /* PropertiesAsSelectorsSpec.swift in Sources */,
 				DEC9DB6520B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
 				DEC9DB6420B20D4400ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift in Sources */,

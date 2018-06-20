@@ -4,6 +4,10 @@ public protocol Stubbing: ProvidingMutableCallValues {}
 public extension Stubbing {
     
     // MARK: Selectors
+    func didCallSelector<ReturnType: ProvidingDefaultStubValue>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType {
+        return value(forMethodWithID: .selector(selector), with: arguments)
+    }
+    
     func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
         return value(forMethodWithID: .selector(selector), with: arguments)
     }
@@ -12,11 +16,11 @@ public extension Stubbing {
         callValues.append(CallValue(methodID: .selector(selector), value: value, matcher: matcher))
     }
     
-    func valueForSelector<ReturnType>(_ selector: Selector) -> ReturnType? {
-        return value(forMethodWithID: .selector(selector), with: [])
+    // MARK: Functions
+    func didCallFunction<ReturnType: ProvidingDefaultStubValue>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType {
+        return value(forMethodWithID: .name(function), with: arguments)
     }
     
-    // MARK: Functions
     func didCallFunction<ReturnType>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType? {
         return value(forMethodWithID: .name(function), with: arguments)
     }
@@ -24,16 +28,16 @@ public extension Stubbing {
     func given(_ function: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
         callValues.append(CallValue(methodID: .name(function), value: value, matcher: matcher))
     }
-    
-    func valueForFunction<ReturnType>(_ function: String = #function) -> ReturnType? {
-        return value(forMethodWithID: .name(function), with: [])
-    }
 }
 
 //MARK: Internal
 internal extension Stubbing {
     
-    func value<ReturnType>(forMethodWithID methodID: MethodID, with arguments: [Any?]) -> ReturnType? {
+    func value<ReturnType: ProvidingDefaultStubValue>(forMethodWithID methodID: MethodID, with arguments: [Any?]) -> ReturnType {
+        return value(forMethodWithID: methodID, with: arguments, shouldWarnAboutNilValue: false) ?? .defaultStubValue
+    }
+    
+    func value<ReturnType>(forMethodWithID methodID: MethodID, with arguments: [Any?], shouldWarnAboutNilValue: Bool = true) -> ReturnType? {
         let tupleArguments = arguments.tuple
         let callValuesMatchingMethodId = callValues.filter { $0.methodID == methodID }
         let callValuesMatchingMethodIdAndArguments = callValuesMatchingMethodId.filter{ $0.matcher.match(arguments: tupleArguments) }

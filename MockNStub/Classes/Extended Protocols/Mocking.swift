@@ -14,8 +14,16 @@ public extension Mocking {
         registerCall(to: .selector(selector), withArguments: arguments)
     }
     
+    func didCallSelector<ReturnType: ProvidingDefaultStubValue>(_ selector: Selector) -> ReturnType {
+        return didCallSelector(selector, withArguments: [])
+    }
+    
     func didCallSelector<ReturnType>(_ selector: Selector) -> ReturnType? {
         return didCallSelector(selector, withArguments: [])
+    }
+    
+    func didCallSelector<ReturnType: ProvidingDefaultStubValue>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType {
+        return didCallSelector(selector, withArguments: arguments) ?? .defaultStubValue
     }
     
     func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
@@ -36,8 +44,16 @@ public extension Mocking {
         registerCall(to: .name(function), withArguments: arguments)
     }
     
+    func didCallFunction<ReturnType: ProvidingDefaultStubValue>(_ function: String = #function) -> ReturnType {
+        return didCallFunction(function, withArguments: [])
+    }
+    
     func didCallFunction<ReturnType>(_ function: String = #function) -> ReturnType? {
         return didCallFunction(function, withArguments: [])
+    }
+    
+    func didCallFunction<ReturnType: ProvidingDefaultStubValue>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType {
+        return didCallFunction(function, withArguments: arguments) ?? .defaultStubValue
     }
     
     func didCallFunction<ReturnType>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType? {

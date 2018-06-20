@@ -13,10 +13,10 @@ class StubWithAllTypesThatHaveDefaultStubValue: Stubbing {
     
     // MARK: String
     func stringUsingFunction() -> String {
-        return didCallFunction()!
+        return didCallFunction()
     }
     
     @objc func stringUsingSelector() -> String {
-        return didCallSelector(#selector(stringUsingSelector))!
+        return didCallSelector(#selector(stringUsingSelector))
     }
 }
