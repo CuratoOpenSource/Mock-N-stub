@@ -2,7 +2,7 @@ import ArrayPlusTuple
 
 public protocol Mocking: Stubbing, ProvidingMutableCalls, ProvidingMutableVerifications, ProvidingFailureHandler {}
 
-//MARK: Pubblic
+//MARK: Public
 public extension Mocking {
     
     // MARK: Selectors
