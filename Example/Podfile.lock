@@ -2,7 +2,7 @@ PODS:
   - ArrayPlusTuple (1.0.0):
     - InjectableLoggers (~> 1.2)
   - InjectableLoggers (1.2.0)
-  - MockNStub (3.0.0):
+  - MockNStub (3.1.0):
     - ArrayPlusTuple (~> 1)
     - InjectableLoggers (~> 1)
   - Nimble (7.0.3)
@@ -31,11 +31,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ArrayPlusTuple: 9e5d3c9354518dc7315ddf9cff0822b967ae6166
   InjectableLoggers: f63523bbb55c5b41ba7cb6a053f5de7aca20a009
-  MockNStub: dde2835f2a6a65f35f0b7f07f47bd28f1325b520
+  MockNStub: 076d7de199940af1ae21e15456a467615171a916
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
   QuickGWT: 1c95a0ec7bfb87f7afba8d6ad92af6c526402d6e
 
 PODFILE CHECKSUM: a7d186fdc724001ec1d1c005e979795aca2b3aa8
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.2
