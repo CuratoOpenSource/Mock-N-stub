@@ -1,6 +1,6 @@
 extension Array: ProvidingDefaultStubValue {
     
-    public static var defaultStubValue: Array<Element> {
+    public static func defaultStubValue() -> Array<Element> {
         return [Element]()
     }
 }

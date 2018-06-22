@@ -1,6 +1,6 @@
 extension Dictionary: ProvidingDefaultStubValue {
-    
-    public static var defaultStubValue: Dictionary<Key, Value> {
+
+    public static func defaultStubValue() -> Dictionary<Key, Value> {
         return [Key: Value]()
     }
 }

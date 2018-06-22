@@ -1,6 +1,6 @@
 extension String: ProvidingDefaultStubValue {
     
-    public static var defaultStubValue: String {
+    public static func defaultStubValue() -> String {
         return ""
     }
 }

@@ -1,6 +1,6 @@
 extension Double: ProvidingDefaultStubValue {
     
-    public static var defaultStubValue: Double {
+    public static func defaultStubValue() -> Double {
         return 0
     }
 }

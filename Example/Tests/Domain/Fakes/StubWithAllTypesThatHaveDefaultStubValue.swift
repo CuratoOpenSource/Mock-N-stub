@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import MockNStub
 
 class StubWithAllTypesThatHaveDefaultStubValue: Stubbing {
@@ -45,6 +46,64 @@ class StubWithAllTypesThatHaveDefaultStubValue: Stubbing {
     }
     
     func double() -> Double {
+        return didCallFunction()
+    }
+    
+    // MARK: UIKit
+    func color() -> UIColor {
+        return didCallFunction()
+    }
+    
+    func view() -> UIView {
+        return didCallFunction()
+    }
+    
+    func label() -> UILabel {
+        return didCallFunction()
+    }
+    
+    func button() -> UIButton {
+        return didCallFunction()
+    }
+    
+    func edgeInsets() -> UIEdgeInsets {
+        return didCallFunction()
+    }
+    
+    func viewController() -> UIViewController {
+        return didCallFunction()
+    }
+    
+    func navigationController() -> UINavigationController {
+        return didCallFunction()
+    }
+    
+    func tabbarController() -> UITabBarController {
+        return didCallFunction()
+    }
+ 
+    func barButtonItem() -> UIBarButtonItem {
+        return didCallFunction()
+    }
+    
+    // MARK: CoreGraphics
+    func cgFloat() -> CGFloat {
+        return didCallFunction()
+    }
+    
+    func cgSize() -> CGSize {
+        return didCallFunction()
+    }
+
+    func cgPoint() -> CGPoint {
+        return didCallFunction()
+    }
+    
+    func cgRect() -> CGRect {
+        return didCallFunction()
+    }
+    
+    func cgAffineTransForm() -> CGAffineTransform {
         return didCallFunction()
     }
 }

@@ -13,7 +13,7 @@ class MockContainingFullnameAndOptionalNicknameUsingSelectors: Mocking, Containi
     
     @objc var fullName: String {
         get {
-            return didCallSelector(#selector(getter: self.fullName))!
+            return didCallSelector(#selector(getter: self.fullName))
         }
         set {
             didCallSelector(#selector(setter: fullName), withArguments: newValue)

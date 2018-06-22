@@ -87,6 +87,120 @@ class DefaultStubValuesSpec: QuickSpec {
                     expect(value).to(equal(0))
                 })
             })
+            
+            //MARK: UIKit types
+            when("asking for a UIColor", closure: {
+                let value = sut.color()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UIColor.self))
+                })
+            })
+            
+            when("asking for a UIView", closure: {
+                let value = sut.view()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UIView.self))
+                })
+            })
+            
+            when("asking for a UILabel", closure: {
+                let value = sut.label()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UILabel.self))
+                })
+            })
+            
+            when("asking for a UIButton", closure: {
+                let value = sut.button()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UIButton.self))
+                })
+            })
+            
+            when("asking for a UIViewController", closure: {
+                let value = sut.viewController()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UIViewController.self))
+                })
+            })
+            
+            when("asking for a UITabBarController", closure: {
+                let value = sut.tabbarController()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UITabBarController.self))
+                })
+            })
+            
+            when("asking for a UINavigationController", closure: {
+                let value = sut.navigationController()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UINavigationController.self))
+                })
+            })
+            
+            when("asking for a UIBarbuttonItem", closure: {
+                let value = sut.tabbarController()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(UITabBarController.self))
+                })
+            })
+            
+            when("asking for a UIEdgeInsets", closure: {
+                let value = sut.edgeInsets()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(equal(.zero))
+                })
+            })
+            
+            //MARK: CoreGraphics Types
+            when("asking for a CGFloat", closure: {
+                let value = sut.cgFloat()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(equal(0))
+                })
+            })
+            
+            when("asking for a CGSize", closure: {
+                let value = sut.cgSize()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(equal(.zero))
+                })
+            })
+            
+            when("asking for a CGPoint", closure: {
+                let value = sut.cgPoint()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(equal(.zero))
+                })
+            })
+            
+            when("asking for a CGRect", closure: {
+                let value = sut.cgRect()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(equal(.zero))
+                })
+            })
+            
+            when("asking for a CGAffineTransform", closure: {
+                let value = sut.cgAffineTransForm()
+                
+                then("default value is correct", closure: {
+                    expect(value).to(beAKindOf(CGAffineTransform.self))
+                })
+            })
         }
     }
 }

@@ -1,6 +1,6 @@
 extension Bool: ProvidingDefaultStubValue {
     
-    public static var defaultStubValue: Bool {
+    public static func defaultStubValue() -> Bool {
         return false
     }
 }

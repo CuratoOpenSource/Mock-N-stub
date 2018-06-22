@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		D516FFB493241E36CDB3A7EE /* Pods_MockNStub_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693CB70A320FA793458D6E1A /* Pods_MockNStub_Tests.framework */; };
+		DE1E6DD020DD1BCA000484AD /* LoggerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E6DCF20DD1BC9000484AD /* LoggerSpec.swift */; };
 		DEC9DB5E20B20D4400ABF5D7 /* MockFailureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB3F20B20D2900ABF5D7 /* MockFailureHandler.swift */; };
 		DEC9DB6020B20D4400ABF5D7 /* MethodsAsFunctionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */; };
 		DEC9DB6120B20D4400ABF5D7 /* MethodsAsSelectorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9DB4520B20D2900ABF5D7 /* MethodsAsSelectorsSpec.swift */; };
@@ -58,6 +59,7 @@
 		895D503D2D8BB699D8E12B8E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8FAC6A347FB989E7BEDA1CC4 /* Pods-MockNStub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CFA021790ACC60DB25E46F57 /* Pods-MockNStub_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DE1E6DCF20DD1BC9000484AD /* LoggerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerSpec.swift; sourceTree = "<group>"; };
 		DE79936420B37C0E00EFB313 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = ../fastlane/Fastfile; sourceTree = "<group>"; };
 		DEC9DB3F20B20D2900ABF5D7 /* MockFailureHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFailureHandler.swift; sourceTree = "<group>"; };
 		DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodsAsFunctionsSpec.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				DEF1700620D9423D00BE6062 /* DefaultStubValuesSpec.swift */,
+				DE1E6DCF20DD1BC9000484AD /* LoggerSpec.swift */,
 				DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */,
 				DEF1700420D9283600BE6062 /* MethodIDSpec.swift */,
 				DEC9DB4520B20D2900ABF5D7 /* MethodsAsSelectorsSpec.swift */,
@@ -458,6 +461,7 @@
 				DEC9DB6520B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
 				DEC9DB6420B20D4400ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
 				DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */,
+				DE1E6DD020DD1BCA000484AD /* LoggerSpec.swift in Sources */,
 				DEF1700720D9423E00BE6062 /* DefaultStubValuesSpec.swift in Sources */,
 				DEC9DB5E20B20D4400ABF5D7 /* MockFailureHandler.swift in Sources */,
 				DEC9DB6020B20D4400ABF5D7 /* MethodsAsFunctionsSpec.swift in Sources */,

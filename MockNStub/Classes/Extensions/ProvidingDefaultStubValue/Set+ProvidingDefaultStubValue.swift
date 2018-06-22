@@ -1,6 +1,6 @@
 extension Set: ProvidingDefaultStubValue {
     
-    public static var defaultStubValue: Set<Element> {
+    public static func defaultStubValue() -> Set<Element> {
         return []
     }
 }

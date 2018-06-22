@@ -13,7 +13,7 @@ class MockContainingFullnameAndOptionalNicknameUsingFunctions: Mocking, Containi
     
     var fullName: String {
         get {
-            return didCallFunction()!
+            return didCallFunction()
         }
         set {
             didCallFunction(withArguments: newValue)

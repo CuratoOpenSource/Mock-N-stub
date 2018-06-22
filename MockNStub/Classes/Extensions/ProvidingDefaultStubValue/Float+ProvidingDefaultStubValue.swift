@@ -1,6 +1,6 @@
 extension Float: ProvidingDefaultStubValue {
     
-    public static var defaultStubValue: Float {
+    public static func defaultStubValue() -> Float {
         return 0
     }
 }

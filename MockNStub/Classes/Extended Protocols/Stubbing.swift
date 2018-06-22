@@ -34,10 +34,12 @@ public extension Stubbing {
 internal extension Stubbing {
     
     func value<ReturnType: ProvidingDefaultStubValue>(forMethodWithID methodID: MethodID, with arguments: [Any?]) -> ReturnType {
-        return value(forMethodWithID: methodID, with: arguments, shouldWarnAboutNilValue: false) ?? .defaultStubValue
+        return value(forMethodWithID: methodID, with: arguments, shouldWarnAboutNilValue: false) ?? .defaultStubValue()
     }
     
     func value<ReturnType>(forMethodWithID methodID: MethodID, with arguments: [Any?], shouldWarnAboutNilValue: Bool = true) -> ReturnType? {
+        logger.logVerbose("\(methodID), \(arguments)")
+        
         let tupleArguments = arguments.tuple
         let callValuesMatchingMethodId = callValues.filter { $0.methodID == methodID }
         let callValuesMatchingMethodIdAndArguments = callValuesMatchingMethodId.filter{ $0.matcher.match(arguments: tupleArguments) }

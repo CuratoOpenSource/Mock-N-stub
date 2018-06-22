@@ -19,7 +19,7 @@ extension ArgumentMatcher: MatchingArguments {
     
     public func match(arguments: Any) -> Bool {
         guard let argumentsOfExpectedType = arguments as? ArgumentsType else {
-            logger.logInfo("Matching failed for arguments of type \(type(of: arguments)) because they were not of expected type: \(ArgumentsType.self)")
+            logger.logInfo("Matching failed for arguments \(arguments) of type \(type(of: arguments)) because they were not of expected type: \(ArgumentsType.self)")
             return false
         }
         return matcher(argumentsOfExpectedType)
