@@ -31,7 +31,7 @@ The implementations in MockNStub are completely protocol oriented. This allows t
 
 ## Two ways of creating fakes
 
-We can create mocks stubs in two ways; using `@objc` **selectors** and using **functions** (or more specifically their names). While using the function names to create [stubs](###Creating-stubs) and [mocks](###Creating-mocks) is a bit faster because needed function name is known within the scope of the stub or mock, it's more error (typo) prone when using these fakes because identifying methods by their names from the outside of the fake does (currently) not currently support code completion or inference. 
+We can create mocks stubs in two ways; using `@objc` **selectors** and using **functions** (or more specifically their names). While using the function names to create [stubs](###Creating-stubs) and [mocks](###Creating-mocks) is a bit faster because the function name is known (and therefore doesn't have to be provided) within the function scope of the stub or mock, it's more error (typo) prone when using these fakes because identifying methods by their names from the outside of the fake does (currently) not currently support code completion or inference. 
 
 Therefore identifying methods using selectors is the recommended way. However some methods can't be identified using selectors because they use swift types that can't be represented in objc. The compiler will let you know when this is the case.
 
