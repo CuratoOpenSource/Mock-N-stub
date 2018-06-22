@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ArrayPlusTuple: 9e5d3c9354518dc7315ddf9cff0822b967ae6166
   InjectableLoggers: f63523bbb55c5b41ba7cb6a053f5de7aca20a009
-  MockNStub: 076d7de199940af1ae21e15456a467615171a916
+  MockNStub: 3c0ccc702d5b15ec35208d67672e4dcd4de6a36e
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
   QuickGWT: 1c95a0ec7bfb87f7afba8d6ad92af6c526402d6e
