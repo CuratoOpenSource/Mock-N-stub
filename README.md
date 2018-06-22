@@ -1,6 +1,6 @@
 # Mock 'N Stub
 
- [![Version](http://img.shields.io/cocoapods/v/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![Platform](http://img.shields.io/cocoapods/p/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![License](http://img.shields.io/cocoapods/l/MockNStub.svg?style=flat)](LICENSE)
+[![Version](http://img.shields.io/cocoapods/v/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![Platform](http://img.shields.io/cocoapods/p/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![License](http://img.shields.io/cocoapods/l/MockNStub.svg?style=flat)](LICENSE)
 
 Code completed Mocking and Stubbing for Swift protocols and classes.
 
@@ -50,29 +50,28 @@ Please note that neither the `Mocking` or `Stubbing` protocols rely on **one** w
 class UITableViewDataSourceStub: Stubbing, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return didCallSelector(#selector(tableView(_:numberOfRowsInSection:)), withArguments: tableView, section)!
+        return didCallSelector(#selector(tableView(_:numberOfRowsInSection:)), withArguments: tableView, section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return didCallSelector(#selector(tableView(_:cellForRowAt:)), withArguments: tableView, indexPath)!
+        return didCallSelector(#selector(tableView(_:cellForRowAt:)), withArguments: tableView, indexPath)
     }
 }
 ```
 Notes:
 
 * Everything inside `#selector()` is code completed.
-* [No need](###unwapping-return-value-of-didCall()) to worry about force unwrapping the optional value that's returned.
 
 #### Using function names
 ```Swift
 class UITableViewDataSourceStub: Stubbing, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return didCallFunction(withArguments: tableView, section)!
+        return didCallFunction(withArguments: tableView, section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return didCallFunction(withArguments: tableView, indexPath)!
+        return didCallFunction(withArguments: tableView, indexPath)
     }
 }
 ```
@@ -81,6 +80,8 @@ Notes:
 * No need to manually provide a function name.
 
 ### Adding return values to stubs
+Return values can be added as many times as desired, in the case where they are provided for the same signature, the value that was last provided is returned.
+
 #### Using selectors
 Considering:
 
@@ -139,11 +140,11 @@ Notes:
 class UITableViewDataSourceMock: NSObject, Mocking, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return didCallSelector(#selector(tableView(_:numberOfRowsInSection:)), withArguments: tableView, section)!
+        return didCallSelector(#selector(tableView(_:numberOfRowsInSection:)), withArguments: tableView, section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return didCallSelector(#selector(tableView(_:cellForRowAt:)), withArguments: tableView, indexPath)!
+        return didCallSelector(#selector(tableView(_:cellForRowAt:)), withArguments: tableView, indexPath)
     }
 }
 ```
@@ -231,7 +232,7 @@ Mocking and stubbing properties is done like expected.
 ```Swift
 var title: String {
     get {
-        return didCallSelector(#selector(getter: self.title))!
+        return didCallSelector(#selector(getter: self.title))
     }
     set {
         didCallSelector(#selector(setter: title), withArguments: newValue)
@@ -248,7 +249,7 @@ Notes:
 ```Swift
 var title: String {
     get {
-        return didCallFunction()!
+        return didCallFunction()
     }
     set {
         didCallFunction(withArguments: newValue)
@@ -260,12 +261,29 @@ Notes:
 
 * This get set pattern is identical on any property.
 
-### Unwapping return value of didCall()
-* Considering you're only going to use MockNStub in your test target(s), there's no need to worry about the force (!) unwrapping of the optional return values of `didCallSelector` and `didCallFunction`.
-	* In the worst case scenario this would lead to a failing test which is desired behavior because it indicates that the test hasn't been setup correctly.
-	* Every force unwrap of a nil value is known before it occurs and will cause detailed diagnosics to be logged to the console which shows what was expected to happen vs. what actually happened:![Screenshot Missing](Art/LogWhenForceUnwappingReturnValue.png)
-* It some cases it can still be helpful to prevent a force unwrapped nil from happening by writing something like `return didCallFunction() ?? 0` instead.
-	* This will have no effect on return values that have been provided using the `given..` methods.	
+### Default return values of didCall()
+Within the `Mocking` and `Stubbing` protocols there's a quite a bunch of implementations for the `didCall` methods. Because of Swifts support for type inference, the correct method will be used at compile time. For instance when `return didCallFunction()` a non void implementation of `didCallFunction()` will be used. Even more exciting, when `return didCallFunction()` is called in a method that returns a value that conforms to `ProvidingDefaultStubValue` there will be no need to unwrap the result of `didCallFunction` because the default value is known (and provided) through the default protocol implementation. Note: these default stub values will only be provided when no other values are provided through the `given...` methods.
+
+Don't worry to much about what is explained above, long story short: your IDE will always give you the most sensible option that's available.
+
+In the case where a type that does not conform to `ProvidingDefaultStubValue` needs to be returned. The compiler won't sugest (and allow) a version of `didCall..` that returns a nonoptional value. You can do three things in this case:
+
+* Make that type conform to `ProvidingDefaultStubValue`
+	* If you do this for a type from one of Apple's libraries, a pull request to this repo containing this extension would be highly appreciated. 
+* Manually provide a default value in case nil is provided: `return didCallFunction() ?? MyType()`
+* Force unwrap the return value provided by the `didCall`
+	* In this case you do want to make sure a value is present using the `given..` methods.
+		* When this isn't done, your test will crash when calling the stubbed or mocked method.
+		* However, every force unwrap of a nil value is known before it occurs and will cause detailed diagnosics to be logged to the console which shows what was expected to happen vs. what actually happened:![Screenshot Missing](Art/LogWhenForceUnwappingReturnValue.png)
+
+#### Types that currently conform to `ProvidingDefaultStubValue`
+* Most types from the Swift Standard library
+* Most commonly used types from UIKit
+* Most commonly used types CoreGraphics
+* All types that inherit from NSObject
+	* Dislaimer; these subclasses do need to adhere to the [Liskov Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle) or in simpler terms: don't have a `fatalError()` or anything similar in their `init()`
+
+[Here's](https://github.com/mennolovink/Mock-N-stub/tree/develop/MockNStub/Classes/Extensions/ProvidingDefaultStubValue) an overview of all types that currently conform to `ProvidingDefaultStubValue `
 
 ## There's more to come..
 
