@@ -30,3 +30,12 @@ class MockContainingFullnameAndOptionalNicknameUsingFunctions: Mocking, Containi
         }
     }
 }
+
+extension MockContainingFullnameAndOptionalNicknameUsingFunctions: DefiningFunctionID {
+    typealias FunctionID = FuncID
+    
+    enum FuncID: String {
+        case fullName
+        case nickname
+    }
+}

@@ -26,6 +26,11 @@ fastlane ios tests
 fastlane ios release
 ```
 
+### ios milestone_number
+```
+fastlane ios milestone_number
+```
+
 
 ----
 

@@ -10,8 +10,8 @@ PODS:
 
 DEPENDENCIES:
   - MockNStub (from `../`)
-  - Nimble
-  - Quick
+  - Nimble (~> 7.3.1)
+  - Quick (~> 1.3.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -31,6 +31,6 @@ SPEC CHECKSUMS:
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
 
-PODFILE CHECKSUM: 446e4680ede32db5efb9765994bdd7d7be5a5b3d
+PODFILE CHECKSUM: 3274cf6d770ddd2097bc97eb6f1b003cfc151a41
 
 COCOAPODS: 1.5.3

@@ -30,6 +30,22 @@ public extension Stubbing {
     }
 }
 
+//MARK: DefiningFunctionID
+public extension Stubbing where Self: DefiningFunctionID {
+    
+    func didCallFunction<ReturnType: ProvidingDefaultStubValue>(withID functionID: FunctionID, withArguments arguments: Any?...) -> ReturnType {
+        return value(forMethodWithID: .name(functionID.rawValue), with: arguments)
+    }
+    
+    func didCallFunction<ReturnType>(withID functionID: FunctionID, withArguments arguments: Any?...) -> ReturnType? {
+        return value(forMethodWithID: .name(functionID.rawValue), with: arguments)
+    }
+    
+    func given(callToFunctionWithID functionID: FunctionID, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
+        callValues.append(CallValue(methodID: .name(functionID.rawValue), value: value, matcher: matcher))
+    }
+}
+
 //MARK: Internal
 internal extension Stubbing {
     

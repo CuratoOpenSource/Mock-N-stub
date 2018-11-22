@@ -38,7 +38,7 @@ public extension Mocking {
     
     // MARK: Functions
     func didCallFunction(_ function: String = #function) {
-        didCallFunction(withArguments: [])
+        didCallFunction(function, withArguments: [])
     }
     
     func didCallFunction(_ function: String = #function, withArguments arguments: Any?...) {
@@ -74,6 +74,40 @@ public extension Mocking {
                 failureHandler.fail(with: "Could not verify call to `\(methodName(from: verification))`", at: Location(file: file, line: line))
             }
         }
+    }
+}
+
+//MARK: DefiningFunctionID
+public extension Mocking where Self: DefiningFunctionID {
+    
+    func didCallFunction(withID functionID: FunctionID) {
+        didCallFunction(functionID.rawValue, withArguments: [])
+    }
+    
+    func didCallFunction(withID functionID: FunctionID, withArguments arguments: Any?...) {
+        registerCall(to: .name(functionID.rawValue), withArguments: arguments)
+    }
+    
+    func didCallFunction<ReturnType: ProvidingDefaultStubValue>(withID functionID: FunctionID) -> ReturnType {
+        return didCallFunction(functionID.rawValue, withArguments: [])
+    }
+    
+    func didCallFunction<ReturnType>(withID functionID: FunctionID) -> ReturnType? {
+        return didCallFunction(functionID.rawValue, withArguments: [])
+    }
+    
+    func didCallFunction<ReturnType: ProvidingDefaultStubValue>(withID functionID: FunctionID, withArguments arguments: Any?...) -> ReturnType {
+        registerCall(to: .name(functionID.rawValue), withArguments: arguments)
+        return value(forMethodWithID: .name(functionID.rawValue), with: arguments)
+    }
+    
+    func didCallFunction<ReturnType>(withID functionID: FunctionID, withArguments arguments: Any?...) -> ReturnType? {
+        registerCall(to: .name(functionID.rawValue), withArguments: arguments)
+        return value(forMethodWithID: .name(functionID.rawValue), with: arguments)
+    }
+    
+    func expect(callToFunctionWithID functionID: FunctionID, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
+        verifications.append(Verification(methodID: .name(functionID.rawValue), matcher: matcher))
     }
 }
 
