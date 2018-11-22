@@ -15,7 +15,7 @@ extension Logger: CanLogMessageAtLevelInFileInFunctionAtLine {
     
     open func log(_ message: Any = "", atLevel level: Loglevel, inFile file: String? = #file, inFunction function: String? = #function, atLine line: Int? = #line) {
         relay?.log(message, atLevel: level, inFile: file, inFunction: function, atLine: line)
-        provideOpportunityForBreakPoints(at: level)
+        breakWhenBreakPointIsAvailable(for: level)
         guard shouldLog(at: level) else { return }
         settings.destination.log(settings.formatter.format(message,
                                                            with: settings.loglevelStrings[level] ?? "",
@@ -53,7 +53,7 @@ extension Logger {
 private extension Logger {
     
     /// Allows putting breakpoints for specific levels if needed
-    func provideOpportunityForBreakPoints(at level: Loglevel) {
+    func breakWhenBreakPointIsAvailable(for level: Loglevel) {
         switch level {
         case .verbose:
             return
