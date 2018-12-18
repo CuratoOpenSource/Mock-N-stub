@@ -69,14 +69,13 @@ public extension Mocking {
     
     // MARK: Verification
     func verify(inFile file: StaticString = #file, atLine line: UInt = #line) {
+        logger.logVerbose("calls\n\(calls)")
+        
         for verification in verifications {
             if calls.filter({   $0.methodID == verification.methodID }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
-                failureHandler.fail(with:"""
-Could not verify call to `\(methodName(from: verification))`
-                    
-                    however
-                    
-                    """, at: Location(file: file, line: line))
+                
+                failureHandler.fail(with: failureMessage(forUnverifyableMethodWithName: methodName(from: verification)),
+                                    at: Location(file: file, line: line))
             }
         }
     }
@@ -132,7 +131,23 @@ private extension Mocking {
         }
     }
     
+    func failureMessage(forUnverifyableMethodWithName methodName: String) -> String {
+        return "Could not verify call to `\(methodName)`" + verificationFailureMessageExplaination(for: calls)
+    }
+    
+    func verificationFailureMessageExplaination(for calls: [Call]) -> String {
+        if calls.count == 0 {
+            return ". No other calls have been made."
+        } else {
+            return """
+            
+             however, the following calls have been registered:
+            \(pretify(calls: calls))
+            """
+        }
+    }
+    
     func pretify(calls: [Call]) -> String {
-        return calls.map{ "-\($0.methodID.description)\n" }.joined()
+        return calls.map{ "-\($0.methodID.rawString)\n" }.joined()
     }
 }

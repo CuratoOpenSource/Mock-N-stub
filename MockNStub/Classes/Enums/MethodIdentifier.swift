@@ -18,4 +18,13 @@ extension MethodID: CustomStringConvertible {
         }
         return description
     }
+    
+    public var rawString: String {
+        switch self {
+        case .name(let name):
+            return name
+        case .selector(let selector):
+            return String(describing: selector)
+        }
+    }
 }
