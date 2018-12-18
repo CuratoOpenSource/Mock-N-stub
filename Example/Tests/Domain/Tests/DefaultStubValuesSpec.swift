@@ -14,14 +14,6 @@ class DefaultStubValuesSpec: QuickSpec {
             //MARK: Swift types
             context("When asking for a String", closure: {
                 
-                context("using a selector", {
-                    let value = sut.stringUsingSelector()
-                    
-                    it("Then  default value is correct", closure: {
-                        expect(value).to(equal(""))
-                    })
-                })
-                
                 context("using a function", {
                     let value = sut.stringUsingFunction()
 

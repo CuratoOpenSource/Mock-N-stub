@@ -17,30 +17,12 @@ class MethodIDSpec: QuickSpec {
                     expect(id1).to(equal(id2))
                 })
             })
-            
-            context("When their selectors are the same", closure: {
-                let id1 = MethodID.selector(#selector(getter: MockContainingFullnameAndOptionalNicknameUsingSelectors.fullName))
-                let id2 = MethodID.selector(#selector(getter: MockContainingFullnameAndOptionalNicknameUsingSelectors.fullName))
-                
-                it("Then  they should be equal", closure: {
-                    expect(id1).to(equal(id2))
-                })
-            })
-            
+
             context("When their names are not the same", closure: {
                 let id1 = MethodID.name(#function)
                 let id2 = MethodID.name(#function.appending(" "))
                 
                 it("Then  they should not be equal", closure: {
-                    expect(id1).notTo(equal(id2))
-                })
-            })
-            
-            context("When their selectors are not the same", closure: {
-                let id1 = MethodID.selector(#selector(getter: MockContainingFullnameAndOptionalNicknameUsingSelectors.fullName))
-                let id2 = MethodID.selector(#selector(getter: MockContainingFullnameAndOptionalNicknameUsingSelectors.nickname))
-                
-                it("Then  they should be equal", closure: {
                     expect(id1).notTo(equal(id2))
                 })
             })

@@ -17,10 +17,6 @@ class StubWithAllTypesThatHaveDefaultStubValue: Stubbing {
         return didCallFunction()
     }
     
-    @objc func stringUsingSelector() -> String {
-        return didCallSelector(#selector(stringUsingSelector))
-    }
-    
     func array() -> [Bool] {
         return didCallFunction()
     }

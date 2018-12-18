@@ -4,39 +4,7 @@ public protocol Mocking: Stubbing, ProvidingMutableCalls, ProvidingMutableVerifi
 
 //MARK: Public
 public extension Mocking {
-    
-    // MARK: Selectors
-    func didCallSelector(_ selector: Selector) {
-        didCallSelector(selector, withArguments: [])
-    }
-    
-    func didCallSelector(_ selector: Selector, withArguments arguments: Any?...) {
-        registerCall(to: .selector(selector), withArguments: arguments)
-    }
-    
-    func didCallSelector<ReturnType: ProvidingDefaultStubValue>(_ selector: Selector) -> ReturnType {
-        return didCallSelector(selector, withArguments: [])
-    }
-    
-    func didCallSelector<ReturnType>(_ selector: Selector) -> ReturnType? {
-        return didCallSelector(selector, withArguments: [])
-    }
-    
-    func didCallSelector<ReturnType: ProvidingDefaultStubValue> (_ selector: Selector, withArguments arguments: Any?...) -> ReturnType {
-        registerCall(to: .selector(selector), withArguments: arguments)
-        return value(forMethodWithID: .selector(selector), with: arguments)
-    }
-    
-    func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
-        registerCall(to: .selector(selector), withArguments: arguments)
-        return value(forMethodWithID: .selector(selector), with: arguments)
-    }
-    
-    func expect(callToSelector selector: Selector, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
-        verifications.append(Verification(methodID: .selector(selector), matcher: matcher))
-    }
-    
-    // MARK: Functions
+
     func didCallFunction(_ function: String = #function) {
         didCallFunction(function, withArguments: [])
     }
@@ -126,8 +94,6 @@ private extension Mocking {
         switch verification.methodID {
         case .name(let name):
             return name
-        case .selector(let selector):
-            return "\(selector)"
         }
     }
     

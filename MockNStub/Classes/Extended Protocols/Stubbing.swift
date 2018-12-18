@@ -3,19 +3,6 @@ public protocol Stubbing: ProvidingMutableCallValues {}
 //MARK: Public
 public extension Stubbing {
     
-    // MARK: Selectors
-    func didCallSelector<ReturnType: ProvidingDefaultStubValue>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType {
-        return value(forMethodWithID: .selector(selector), with: arguments)
-    }
-    
-    func didCallSelector<ReturnType>(_ selector: Selector, withArguments arguments: Any?...) -> ReturnType? {
-        return value(forMethodWithID: .selector(selector), with: arguments)
-    }
-    
-    func given(_ selector: Selector, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
-        callValues.append(CallValue(methodID: .selector(selector), value: value, matcher: matcher))
-    }
-    
     // MARK: Functions
     func didCallFunction<ReturnType: ProvidingDefaultStubValue>(_ function: String = #function, withArguments arguments: Any?...) -> ReturnType {
         return value(forMethodWithID: .name(function), with: arguments)
