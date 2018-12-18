@@ -12,6 +12,15 @@ import MockNStub
 class MockFailureHandler: Mocking, FailingWithMessageAtLocation {
     
     func fail(with message: String, at location: Location) {
-        didCallFunction(withArguments: (message, location))
+        didCallFunction(withID: .failWithMessageAtLocation, withArguments: message, location)
+    }
+}
+
+extension MockFailureHandler: DefiningFunctionID {
+    
+    typealias FunctionID = FID
+    
+    enum FID: String {
+        case failWithMessageAtLocation
     }
 }

@@ -29,7 +29,7 @@ class MockTableViewDataSourceUsingSelectorsSpec: QuickSpec {
                     beforeEach {
                         mockFailureHandler = MockFailureHandler()
                         sut.given("failureHandler", willReturn: mockFailureHandler)
-                        mockFailureHandler.expect(callToFunction: "fail(with:at:)")
+                        mockFailureHandler.expect(callToFunctionWithID: .failWithMessageAtLocation)
                     }
                     
                     it("Fails when expected methods are not called", closure: {

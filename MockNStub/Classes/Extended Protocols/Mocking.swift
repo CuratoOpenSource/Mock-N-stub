@@ -71,7 +71,12 @@ public extension Mocking {
     func verify(inFile file: StaticString = #file, atLine line: UInt = #line) {
         for verification in verifications {
             if calls.filter({   $0.methodID == verification.methodID }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
-                failureHandler.fail(with: "Could not verify call to `\(methodName(from: verification))`", at: Location(file: file, line: line))
+                failureHandler.fail(with:"""
+Could not verify call to `\(methodName(from: verification))`
+                    
+                    however
+                    
+                    """, at: Location(file: file, line: line))
             }
         }
     }
@@ -125,5 +130,9 @@ private extension Mocking {
         case .selector(let selector):
             return "\(selector)"
         }
+    }
+    
+    func pretify(calls: [Call]) -> String {
+        return calls.map{ "-\($0.methodID.description)\n" }.joined()
     }
 }
