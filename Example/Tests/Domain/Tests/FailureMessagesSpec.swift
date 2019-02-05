@@ -3,8 +3,6 @@ import Quick
 import Nimble
 import MockNStub
 
-class EmptyMock: Mocking {}
-
 class FailureMessagesSpec: QuickSpec {
     
     override func spec() {

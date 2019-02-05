@@ -1,4 +1,4 @@
-public protocol Stubbing: ProvidingMutableCallValues {}
+public protocol Stubbing: ProvidingMutableCallValues, Resetable {}
 
 //MARK: Public
 public extension Stubbing {
@@ -14,6 +14,10 @@ public extension Stubbing {
     
     func given(_ function: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher, willReturn value: Any?) {
         callValues.append(CallValue(methodID: .name(function), value: value, matcher: matcher))
+    }
+    
+    func reset() {
+        callValues = []
     }
 }
 

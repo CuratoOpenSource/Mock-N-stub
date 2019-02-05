@@ -13,6 +13,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		622F398E21C8FF62004C6F96 /* FailureMessagesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F398D21C8FF62004C6F96 /* FailureMessagesSpec.swift */; };
+		6261FFED2209938500112BA9 /* EmptyStubSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261FFEC2209938500112BA9 /* EmptyStubSpec.swift */; };
+		6261FFEE2209942B00112BA9 /* EmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261FFEB2209933200112BA9 /* EmptyMock.swift */; };
+		6261FFEF2209942F00112BA9 /* EmptyStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261FFE922098C0400112BA9 /* EmptyStub.swift */; };
+		6261FFF222099C7300112BA9 /* EmptyMockSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261FFF122099C7300112BA9 /* EmptyMockSpec.swift */; };
 		6CBAC670006C577D5BF5E726 /* Pods_MockNStub_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0A9D672D9384A4418C3630 /* Pods_MockNStub_Tests.framework */; };
 		7DD780445059370E65701D8E /* Pods_MockNStub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B329FA34EE7F7644F4B9092 /* Pods_MockNStub_Example.framework */; };
 		DE1E6DD020DD1BCA000484AD /* LoggerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E6DCF20DD1BC9000484AD /* LoggerSpec.swift */; };
@@ -51,6 +55,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61A67632D9BB84BB5FF6DA2A /* Pods-MockNStub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example.release.xcconfig"; sourceTree = "<group>"; };
 		622F398D21C8FF62004C6F96 /* FailureMessagesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureMessagesSpec.swift; sourceTree = "<group>"; };
+		6261FFE922098C0400112BA9 /* EmptyStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStub.swift; sourceTree = "<group>"; };
+		6261FFEB2209933200112BA9 /* EmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMock.swift; sourceTree = "<group>"; };
+		6261FFEC2209938500112BA9 /* EmptyStubSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStubSpec.swift; sourceTree = "<group>"; };
+		6261FFF122099C7300112BA9 /* EmptyMockSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMockSpec.swift; sourceTree = "<group>"; };
 		783D720965989970FF3697D4 /* Pods-MockNStub_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		819A71BB068FB0B2AC31F2BA /* Pods-MockNStub_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8404B53AD26AA36BD377ABDC /* MockNStub.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MockNStub.podspec; path = ../MockNStub.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -209,6 +217,8 @@
 				DEC9DB4420B20D2900ABF5D7 /* MethodsAsFunctionsSpec.swift */,
 				622F398D21C8FF62004C6F96 /* FailureMessagesSpec.swift */,
 				DEF1700420D9283600BE6062 /* MethodIDSpec.swift */,
+				6261FFEC2209938500112BA9 /* EmptyStubSpec.swift */,
+				6261FFF122099C7300112BA9 /* EmptyMockSpec.swift */,
 				DEC9DB4620B20D2900ABF5D7 /* PropertiesAsMethodsSpec.swift */,
 			);
 			path = Tests;
@@ -220,6 +230,8 @@
 				DEC9DB4920B20D2A00ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift */,
 				DEC9DB4A20B20D2A00ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift */,
 				DEF1700B20D946AF00BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift */,
+				6261FFEB2209933200112BA9 /* EmptyMock.swift */,
+				6261FFE922098C0400112BA9 /* EmptyStub.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -457,15 +469,19 @@
 			files = (
 				DEC9DB6220B20D4400ABF5D7 /* PropertiesAsMethodsSpec.swift in Sources */,
 				DEC9DB6920B20D4400ABF5D7 /* ContainingOptionalNickname.swift in Sources */,
+				6261FFED2209938500112BA9 /* EmptyStubSpec.swift in Sources */,
 				DEC9DB6820B20D4400ABF5D7 /* ContainingFullName.swift in Sources */,
 				DEF1700D20D94CC000BE6062 /* StubWithAllTypesThatHaveDefaultStubValue.swift in Sources */,
 				DEC9DB6520B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
+				6261FFF222099C7300112BA9 /* EmptyMockSpec.swift in Sources */,
 				622F398E21C8FF62004C6F96 /* FailureMessagesSpec.swift in Sources */,
+				6261FFEE2209942B00112BA9 /* EmptyMock.swift in Sources */,
 				DEC9DB6420B20D4400ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
 				DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */,
 				DE1E6DD020DD1BCA000484AD /* LoggerSpec.swift in Sources */,
 				DEF1700720D9423E00BE6062 /* DefaultStubValuesSpec.swift in Sources */,
 				DEC9DB5E20B20D4400ABF5D7 /* MockFailureHandler.swift in Sources */,
+				6261FFEF2209942F00112BA9 /* EmptyStub.swift in Sources */,
 				DEC9DB6020B20D4400ABF5D7 /* MethodsAsFunctionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

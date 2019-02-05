@@ -47,6 +47,12 @@ public extension Mocking {
             }
         }
     }
+    
+    func reset() {
+        calls = []
+        callValues = []
+        verifications = []
+    }
 }
 
 //MARK: DefiningFunctionID
