@@ -191,8 +191,8 @@ _Note: the example above is done for a stub but is done just the same for mocks_
 
 Conforming to `DefiningFunctionID` will unlock the following range of mock and stub methods:
 
-    didCallFunction(withID: FuncID.numberOfRows)
-    mock.expect(callToFunctionWithID: FuncID.numberOfRows)
+    didCallFunction(withID: .numberOfRows)
+    mock.expect(callToFunctionWithID: .numberOfRows)
 
 ## There's more to come..
 
