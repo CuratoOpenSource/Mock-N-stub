@@ -17,6 +17,7 @@
 		6261FFEE2209942B00112BA9 /* EmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261FFEB2209933200112BA9 /* EmptyMock.swift */; };
 		6261FFEF2209942F00112BA9 /* EmptyStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261FFE922098C0400112BA9 /* EmptyStub.swift */; };
 		6261FFF222099C7300112BA9 /* EmptyMockSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261FFF122099C7300112BA9 /* EmptyMockSpec.swift */; };
+		62E3F20422D618BC00A4AA4E /* OOQuickContexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E3F20222D6189F00A4AA4E /* OOQuickContexts.swift */; };
 		6CBAC670006C577D5BF5E726 /* Pods_MockNStub_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0A9D672D9384A4418C3630 /* Pods_MockNStub_Tests.framework */; };
 		7DD780445059370E65701D8E /* Pods_MockNStub_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B329FA34EE7F7644F4B9092 /* Pods_MockNStub_Example.framework */; };
 		DE1E6DD020DD1BCA000484AD /* LoggerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E6DCF20DD1BC9000484AD /* LoggerSpec.swift */; };
@@ -59,6 +60,7 @@
 		6261FFEB2209933200112BA9 /* EmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMock.swift; sourceTree = "<group>"; };
 		6261FFEC2209938500112BA9 /* EmptyStubSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStubSpec.swift; sourceTree = "<group>"; };
 		6261FFF122099C7300112BA9 /* EmptyMockSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMockSpec.swift; sourceTree = "<group>"; };
+		62E3F20222D6189F00A4AA4E /* OOQuickContexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOQuickContexts.swift; sourceTree = "<group>"; };
 		783D720965989970FF3697D4 /* Pods-MockNStub_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		819A71BB068FB0B2AC31F2BA /* Pods-MockNStub_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockNStub_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8404B53AD26AA36BD377ABDC /* MockNStub.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MockNStub.podspec; path = ../MockNStub.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -172,6 +174,14 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		62E3F20122D6188700A4AA4E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62E3F20222D6189F00A4AA4E /* OOQuickContexts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C097227A1FE362E696F23E3F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		DEC9DB3B20B20D2900ABF5D7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				62E3F20122D6188700A4AA4E /* Helpers */,
 				DEC9DB3E20B20D2900ABF5D7 /* Fakes */,
 			);
 			path = Common;
@@ -475,6 +486,7 @@
 				DEC9DB6520B20D4400ABF5D7 /* MockContainingFullnameAndOptionalNicknameUsingFunctions.swift in Sources */,
 				6261FFF222099C7300112BA9 /* EmptyMockSpec.swift in Sources */,
 				622F398E21C8FF62004C6F96 /* FailureMessagesSpec.swift in Sources */,
+				62E3F20422D618BC00A4AA4E /* OOQuickContexts.swift in Sources */,
 				6261FFEE2209942B00112BA9 /* EmptyMock.swift in Sources */,
 				DEC9DB6420B20D4400ABF5D7 /* MockTableViewDataSourceUsingFunctions.swift in Sources */,
 				DEF1700520D9283700BE6062 /* MethodIDSpec.swift in Sources */,
