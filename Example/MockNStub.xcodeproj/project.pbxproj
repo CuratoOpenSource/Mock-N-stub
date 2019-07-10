@@ -365,7 +365,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -378,7 +378,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MockNStub_Tests/Pods-MockNStub_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		36E4504819C93ACA0BB1A082 /* [CP] Check Pods Manifest.lock */ = {
@@ -433,7 +433,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ArrayPlusTuple/ArrayPlusTuple.framework",
 				"${BUILT_PRODUCTS_DIR}/InjectableLoggers/InjectableLoggers.framework",
 				"${BUILT_PRODUCTS_DIR}/MockNStub/MockNStub.framework",
@@ -448,7 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MockNStub_Example/Pods-MockNStub_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
