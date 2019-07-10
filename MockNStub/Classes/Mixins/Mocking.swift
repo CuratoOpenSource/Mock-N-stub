@@ -5,6 +5,8 @@ public protocol Mocking: Stubbing, ProvidingMutableCalls, ProvidingMutableVerifi
 //MARK: Public
 public extension Mocking {
 
+    typealias Fail = ()->()
+    
     func didCallFunction(_ function: String = #function) {
         didCallFunction(function, withArguments: [])
     }
@@ -43,13 +45,13 @@ public extension Mocking {
     func verify(inFile file: StaticString = #file, atLine line: UInt = #line) {
         logger.logVerbose("calls\n\(calls)")
         
-        for verification in verifications {
-            if calls.filter({   $0.methodID == verification.methodID }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
-                
-                failureHandler.fail(with: failureMessage(forUnverifyableMethodWithName: methodName(from: verification)),
-                                    at: Location(file: file, line: line))
-            }
+        findFails(forFile: file, andLine: line).forEach { (failure) in
+            failure()
         }
+    }
+    
+    func wouldFailIfVerified() -> Bool {
+        return findFails().count > 0
     }
     
     func reset() {
@@ -91,8 +93,6 @@ public extension Mocking where Self: DefiningFunctionID {
     func expect(callToFunctionWithID functionID: FunctionID,
                 withArgumentsThatMatch
         matcher: MatchingArguments = anyArgumentMatcher) {
-        verifications.append(Verification(methodID: .name(functionID.rawValue), matcher: matcher))
-        
         expect(.anyAmount, callsToFunctionWithID: functionID, withArgumentsThatMatch: matcher)
     }
     
@@ -136,5 +136,22 @@ private extension Mocking {
     
     func pretify(calls: [Call]) -> String {
         return calls.map{ "-\($0.methodID.rawString)\n" }.joined()
+    }
+    
+    func findFails(forFile file: StaticString = #file, andLine line: UInt = #line) -> [Fail] {
+        
+        var fails = [Fail]()
+        
+        for verification in verifications {
+            if calls.filter({   $0.methodID == verification.methodID }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
+                
+                fails.append {
+                    self.failureHandler.fail(with: self.failureMessage(forUnverifyableMethodWithName: self.methodName(from: verification)),
+                                             at: Location(file: file, line: line))
+                }
+            }
+        }
+        
+        return fails
     }
 }

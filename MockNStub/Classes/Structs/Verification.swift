@@ -30,6 +30,6 @@ public extension Verification {
     
     enum Amount {
         case anyAmount
-        case exactly(amount: UInt)
+        case exactly(amount: Int)
     }
 }
