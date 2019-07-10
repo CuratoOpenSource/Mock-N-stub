@@ -32,7 +32,11 @@ public extension Mocking {
     }
     
     func expect(callToFunction function: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
-        verifications.append(Verification(methodID: .name(function), matcher: matcher))
+        expect(.anyAmount, callsToFunction: function, withArgumentsThatMatch: matcher)
+    }
+    
+    func expect(_ amount: Verification.Amount, callsToFunction function: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
+        verifications.append(Verification(methodID: .name(function), matcher: matcher, amount: amount))
     }
     
     // MARK: Verification
@@ -84,8 +88,19 @@ public extension Mocking where Self: DefiningFunctionID {
         return value(forMethodWithID: .name(functionID.rawValue), with: arguments)
     }
     
-    func expect(callToFunctionWithID functionID: FunctionID, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
+    func expect(callToFunctionWithID functionID: FunctionID,
+                withArgumentsThatMatch
+        matcher: MatchingArguments = anyArgumentMatcher) {
         verifications.append(Verification(methodID: .name(functionID.rawValue), matcher: matcher))
+        
+        expect(.anyAmount, callsToFunctionWithID: functionID, withArgumentsThatMatch: matcher)
+    }
+    
+    func expect(_ amount: Verification.Amount,
+                callsToFunctionWithID functionID: FunctionID,
+                withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
+        
+        expect(amount, callsToFunction: functionID.rawValue, withArgumentsThatMatch: matcher)
     }
 }
 
