@@ -62,7 +62,7 @@ extension QuickSpec {
         
         func wrapInNeededContext(_ closure: @escaping Closure) -> Closure {
             return {
-                context(self.description, {
+                describe(self.description, {
                     closure()
                 })
             }
@@ -71,6 +71,7 @@ extension QuickSpec {
     
     class Given: Context {
         
+        @discardableResult
         init(a className: AnyClass, _ beforeEach: @escaping Closure) {
             super.init("Given a \(className)", beforeEach)
         }
@@ -94,8 +95,12 @@ extension QuickSpec {
         }
         
         override func wrapInNeededContext(_ closure: @escaping QuickSpec.Context.Closure) -> QuickSpec.Context.Closure {
-            return super.wrapInNeededContext {
-                closure()
+            return parent.wrapInNeededContext {
+                
+                context(self.description, {
+                    
+                    closure()
+                })
             }
         }
     }
