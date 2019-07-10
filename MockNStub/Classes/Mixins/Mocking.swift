@@ -153,17 +153,20 @@ private extension Mocking {
                 }
             }
             
-            let numberOfVerifications = calls   .filter({   $0.methodID == verification.methodID })
-                                                .filter({ verification.matcher.match(arguments: $0.arguments) }).count
+            let numberOfCallsThatMatchVerification = calls  .filter({   $0.methodID == verification.methodID })
+                                                            .filter({ verification.matcher.match(arguments: $0.arguments) }).count
             
             switch verification.amount {
                 
             case .anyAmount:
-                if numberOfVerifications == 0 {
+                if numberOfCallsThatMatchVerification == 0 {
                     appendFailureForCurrentVerification()
                 }
             case .exactly(let amount):
-                if numberOfVerifications != amount {
+                
+                if numberOfCallsThatMatchVerification == 0 {
+                    appendFailureForCurrentVerification()
+                } else if numberOfCallsThatMatchVerification != amount {
                     appendFailureForCurrentVerification()
                 }
             }
