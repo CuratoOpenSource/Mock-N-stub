@@ -37,7 +37,9 @@ public extension Mocking {
         expect(.anyAmount, callsToFunction: function, withArgumentsThatMatch: matcher)
     }
     
-    func expect(_ amount: Verification.Amount, callsToFunction function: String, withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
+    func expect(_ amount: Verification.Amount,
+                callsToFunction function: String,
+                withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
         verifications.append(Verification(methodID: .name(function), matcher: matcher, amount: amount))
     }
     
@@ -99,7 +101,7 @@ public extension Mocking where Self: DefiningFunctionID {
     func expect(_ amount: Verification.Amount,
                 callsToFunctionWithID functionID: FunctionID,
                 withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
-        
+        print("👋👋👋👋👋👋👋")
         expect(amount, callsToFunction: functionID.rawValue, withArgumentsThatMatch: matcher)
     }
 }
@@ -118,11 +120,11 @@ private extension Mocking {
         }
     }
     
-    func failureMessage(forUnverifyableMethodWithName methodName: String) -> String {
-        return "Could not verify call to `\(methodName)`" + verificationFailureMessageExplaination(for: calls)
+    func failureMessage(for failedVerification: Verification) -> String {
+        return "Could not verify call to `\(methodName(from: failedVerification))`" + verificationFailureMessageExplaination(for: failedVerification)
     }
     
-    func verificationFailureMessageExplaination(for calls: [Call]) -> String {
+    func verificationFailureMessageExplaination(for FailedVerification: Verification) -> String {
         if calls.count == 0 {
             return ". No other calls have been made."
         } else {
@@ -143,11 +145,26 @@ private extension Mocking {
         var fails = [Fail]()
         
         for verification in verifications {
-            if calls.filter({   $0.methodID == verification.methodID }).filter({ verification.matcher.match(arguments: $0.arguments) }).count == 0 {
-                
+            
+            func appendFailureForCurrentVerification() {
                 fails.append {
-                    self.failureHandler.fail(with: self.failureMessage(forUnverifyableMethodWithName: self.methodName(from: verification)),
+                    self.failureHandler.fail(with: self.failureMessage(for: verification),
                                              at: Location(file: file, line: line))
+                }
+            }
+            
+            let numberOfVerifications = calls   .filter({   $0.methodID == verification.methodID })
+                                                .filter({ verification.matcher.match(arguments: $0.arguments) }).count
+            
+            switch verification.amount {
+                
+            case .anyAmount:
+                if numberOfVerifications == 0 {
+                    appendFailureForCurrentVerification()
+                }
+            case .exactly(let amount):
+                if numberOfVerifications != amount {
+                    appendFailureForCurrentVerification()
                 }
             }
         }

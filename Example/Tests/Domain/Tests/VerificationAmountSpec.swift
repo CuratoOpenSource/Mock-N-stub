@@ -43,6 +43,7 @@ class VerificationAmountSpec: QuickSpec {
                     sut.expect(.exactly(amount: callCount + 1), callsToFunctionWithID: .doThis)
                 
             }).then("it fails", {
+//                sut.verify()
                 expect(sut.wouldFailIfVerified()).to(beTruthy())
             })
         }
