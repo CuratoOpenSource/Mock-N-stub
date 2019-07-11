@@ -1,12 +1,14 @@
 use_frameworks!
 
+
+
 target 'MockNStub_Example' do
   pod 'MockNStub', :path => '../'
 
   target 'MockNStub_Tests' do
     inherit! :search_paths
 
-    pod 'Quick' , '~> 2.0.0'
-    pod 'Nimble' , '~> 8.0.0'
+    pod 'Quick' , '2.0.0'
+    pod 'Nimble' , '8.0.0'
   end
 end

@@ -5,13 +5,13 @@ PODS:
   - MockNStub (5.0.0):
     - ArrayPlusTuple (~> 1)
     - InjectableLoggers (~> 1)
-  - Nimble (8.0.1)
+  - Nimble (8.0.0)
   - Quick (2.0.0)
 
 DEPENDENCIES:
   - MockNStub (from `../`)
-  - Nimble (~> 8.0.0)
-  - Quick (~> 2.0.0)
+  - Nimble (= 8.0.0)
+  - Quick (= 2.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -28,9 +28,9 @@ SPEC CHECKSUMS:
   ArrayPlusTuple: 9e5d3c9354518dc7315ddf9cff0822b967ae6166
   InjectableLoggers: 990b09d8038dd0f22d851b911c01360ba40e7951
   MockNStub: d93746e9e185cf79dec6aec8d368125f0146dac7
-  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Nimble: a0e6f95b4b91a4f66b6da3512b6bebc07c9cbf49
   Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
 
-PODFILE CHECKSUM: cb0dbc5f4f0d5d0943f391b499abdcd968cd18d0
+PODFILE CHECKSUM: 6419c5129b05ce4778045c922adf52f3f0559f52
 
 COCOAPODS: 1.6.1
