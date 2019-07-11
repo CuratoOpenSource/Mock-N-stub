@@ -2,7 +2,7 @@ PODS:
   - ArrayPlusTuple (1.0.0):
     - InjectableLoggers (~> 1.2)
   - InjectableLoggers (1.4.0)
-  - MockNStub (5.1.0):
+  - MockNStub (5.1.1):
     - ArrayPlusTuple (~> 1)
     - InjectableLoggers (~> 1)
   - Nimble (8.0.0)
@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ArrayPlusTuple: 9e5d3c9354518dc7315ddf9cff0822b967ae6166
   InjectableLoggers: 990b09d8038dd0f22d851b911c01360ba40e7951
-  MockNStub: d43c3fc7fcabd85ce4ee4f65c15d56ea012142c6
+  MockNStub: 1b81ff77de1734a9c374f37f9c08e646c78f92d6
   Nimble: a0e6f95b4b91a4f66b6da3512b6bebc07c9cbf49
   Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
 
