@@ -10,7 +10,7 @@ public class ArgumentMatcher<ArgumentsType> {
 public extension ArgumentMatcher {
     
     /// Matches any argument
-    public static var any: ArgumentMatcher<Any> {
+    static var any: ArgumentMatcher<Any> {
         return anyArgumentMatcher
     }
 }
