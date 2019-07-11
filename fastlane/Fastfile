@@ -5,6 +5,7 @@ default_platform(:ios)
 
 platform :ios do
   	lane :tests do
+      cocoapods(clean: true, podfile: "Example/Podfile", repo_update: true)		
   		scan()
 	end
 
@@ -22,6 +23,7 @@ platform :ios do
       mileStoneNumber = milestone_number(versionNumber: version)
     
       version_bump_podspec(path: "MockNStub.podspec", version_number: version)
+      cocoapods(clean: true, podfile: "Example/Podfile", repo_update: true)
 
   		scan()
   		pod_lib_lint
