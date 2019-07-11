@@ -1,73 +1,97 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='MockNStub_Tests.xctest' tests='54' failures='0'>
+<testsuites name='MockNStub_Tests.xctest' tests='74' failures='0'>
   <testsuite name='MockNStub_Tests.DefaultStubValuesSpec' tests='22' failures='0'>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_String__using_a_function__Then__default_value_is_correct' time='0.003'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_String__using_a_function__Then__default_value_is_correct' time='0.005'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_an_Array__Then__default_value_is_correct' time='0.001'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Dictionary__Then__default_value_is_correct' time='0.000'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Dictionary__Then__default_value_is_correct' time='0.002'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Set__Then__default_value_is_correct' time='0.001'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_an_Int__Then__default_value_is_correct' time='0.001'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Bool__Then__default_value_is_correct' time='0.000'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Bool__Then__default_value_is_correct' time='0.001'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Float__Then__default_value_is_correct' time='0.001'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Double__Then__default_value_is_correct' time='0.000'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_Double__Then__default_value_is_correct' time='0.001'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIColor__Then__default_value_is_correct' time='0.001'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIView__Then__default_value_is_correct' time='0.000'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UILabel__Then__default_value_is_correct' time='0.000'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIButton__Then__default_value_is_correct' time='0.000'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIViewController__Then__default_value_is_correct' time='0.000'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIView__Then__default_value_is_correct' time='0.001'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UILabel__Then__default_value_is_correct' time='0.001'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIButton__Then__default_value_is_correct' time='0.001'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIViewController__Then__default_value_is_correct' time='0.001'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UITabBarController__Then__default_value_is_correct' time='0.000'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UINavigationController__Then__default_value_is_correct' time='0.001'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIBarbuttonItem__Then__default_value_is_correct' time='0.000'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIEdgeInsets__Then__default_value_is_correct' time='0.003'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_UIEdgeInsets__Then__default_value_is_correct' time='0.002'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_CGFloat__Then__default_value_is_correct' time='0.001'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_CGSize__Then__default_value_is_correct' time='0.001'/>
     <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_CGPoint__Then__default_value_is_correct' time='0.001'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_CGRect__Then__default_value_is_correct' time='0.001'/>
-    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_CGAffineTransform__Then__default_value_is_correct' time='0.000'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_CGRect__Then__default_value_is_correct' time='0.018'/>
+    <testcase classname='MockNStub_Tests.DefaultStubValuesSpec' name='Given_a_stub__When_asking_for_a_CGAffineTransform__Then__default_value_is_correct' time='0.020'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.EmptyMockSpec' tests='6' failures='0'>
-    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__Then_callValues_are_not_empty' time='0.002'/>
-    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__Then_calls_are_not_empty' time='0.001'/>
-    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__Then_verifications_are_not_empty' time='0.001'/>
-    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__When_resetted__Then_callValues_are_empty' time='0.001'/>
-    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__When_resetted__Then_calls_are_empty' time='0.001'/>
-    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__When_resetted__Then_verifications_are_empty' time='0.001'/>
+    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__Then_callValues_are_not_empty' time='0.008'/>
+    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__Then_calls_are_not_empty' time='0.005'/>
+    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__Then_verifications_are_not_empty' time='0.004'/>
+    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__When_resetted__Then_callValues_are_empty' time='0.002'/>
+    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__When_resetted__Then_calls_are_empty' time='0.002'/>
+    <testcase classname='MockNStub_Tests.EmptyMockSpec' name='Given_a_EmptyMock__With_a_non_empty_state__When_resetted__Then_verifications_are_empty' time='0.002'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.EmptyStubSpec' tests='2' failures='0'>
     <testcase classname='MockNStub_Tests.EmptyStubSpec' name='Given_a_EmptyStub__With_a_non_empty_state__Then_callValues_are_not_empty' time='0.001'/>
-    <testcase classname='MockNStub_Tests.EmptyStubSpec' name='Given_a_EmptyStub__With_a_non_empty_state__When_resetted__Then_callValues_are_empty' time='0.000'/>
+    <testcase classname='MockNStub_Tests.EmptyStubSpec' name='Given_a_EmptyStub__With_a_non_empty_state__When_resetted__Then_callValues_are_empty' time='0.001'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.FailureMessagesSpec' tests='3' failures='0'>
-    <testcase classname='MockNStub_Tests.FailureMessagesSpec' name='Given_a_Mock__That_s_expecting_a_call_to_foo__When_no_calls_have_been_made__Then_it_fails_with_expected_message' time='0.001'/>
+    <testcase classname='MockNStub_Tests.FailureMessagesSpec' name='Given_a_Mock__That_s_expecting_a_call_to_foo__When_no_calls_have_been_made__Then_it_fails_with_expected_message' time='0.005'/>
     <testcase classname='MockNStub_Tests.FailureMessagesSpec' name='Given_a_Mock__That_s_expecting_a_call_to_foo__When_one_call_has_been_made__Then_it_fails_with_expected_message' time='0.001'/>
-    <testcase classname='MockNStub_Tests.FailureMessagesSpec' name='Given_a_Mock__That_s_expecting_a_call_to_foo__When_one_call_has_been_made__And_another_call_has_been_made__Then_it_fails_with_expected_message' time='0.000'/>
+    <testcase classname='MockNStub_Tests.FailureMessagesSpec' name='Given_a_Mock__That_s_expecting_a_call_to_foo__When_one_call_has_been_made__And_another_call_has_been_made__Then_it_fails_with_expected_message' time='0.001'/>
+  </testsuite>
+  <testsuite name='MockNStub_Tests.FunctionIDSpec' tests='8' failures='0'>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_registered_using_functionID_doThis__And_When_a_call_is_registered_using_function_name_doThis__Then_number_of_registered_calls_is_correct' time='0.003'/>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_registered_using_functionID_doThis__And_When_a_call_is_registered_using_function_name_doThis__Then_Then_created_MethodID_s_are_correct' time='0.001'/>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_expected_using_functionID_doThis__And_When_And_when_a_call_is_expected_using_function_name_doThis__Then_Then_number_of_registered_calls_is_correct' time='0.003'/>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_expected_using_functionID_doThis__And_When_And_when_a_call_is_expected_using_function_name_doThis__Then_Then_created_MethodID_s_are_correct' time='0.001'/>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_registered_using_functionID_doThatWithBooleanArgument__And_When_a_call_is_registered_using_function_name_doThatWithBooleanArgument__Then_number_of_registered_calls_is_correct' time='0.004'/>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_registered_using_functionID_doThatWithBooleanArgument__And_When_a_call_is_registered_using_function_name_doThatWithBooleanArgument__Then_Then_created_MethodID_s_are_correct' time='0.001'/>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_expected_using_functionID_doThatWithBooleanArgument__And_When_And_when_a_call_is_expected_using_function_name_doThatWithBooleanArgument__Then_Then_number_of_registered_calls_is_correct' time='0.001'/>
+    <testcase classname='MockNStub_Tests.FunctionIDSpec' name='Given_a_MockWithFunctionIDs__When_a_call_is_expected_using_functionID_doThatWithBooleanArgument__And_When_And_when_a_call_is_expected_using_function_name_doThatWithBooleanArgument__Then_Then_created_MethodID_s_are_correct' time='0.001'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.LoggerSpec' tests='1' failures='0'>
     <testcase classname='MockNStub_Tests.LoggerSpec' name='Given_the_logger_instance__When_setting_are_asked__Then__their_active_loglevel_is_Info' time='0.001'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.MethodIDSpec' tests='2' failures='0'>
     <testcase classname='MockNStub_Tests.MethodIDSpec' name='Given_two_MethodID_s__When_their_names_are_the_same__Then__they_should_be_equal' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MethodIDSpec' name='Given_two_MethodID_s__When_their_names_are_not_the_same__Then__they_should_not_be_equal' time='0.000'/>
+    <testcase classname='MockNStub_Tests.MethodIDSpec' name='Given_two_MethodID_s__When_their_names_are_not_the_same__Then__they_should_not_be_equal' time='0.002'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' tests='12' failures='0'>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_2' time='0.001'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called' time='0.005'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_2' time='0.002'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_3' time='0.003'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_with_arguments_that_don_t_match' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_called_with_incorrect_matcher_type' time='0.002'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_not_called_with_arguments_that_don_t_match' time='0.002'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Expecting_failures__Fails_when_expected_methods_are_called_with_incorrect_matcher_type' time='0.003'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_2' time='0.001'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_2' time='0.003'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_3' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Mocking__Not_expecting_failures__Doesn_t_fail_when_expected_methods_are_called_with_arguments_that_match' time='0.001'/>
-    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue' time='0.001'/>
+    <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue' time='0.003'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue_2' time='0.001'/>
     <testcase classname='MockNStub_Tests.MockTableViewDataSourceUsingFunctionsSpec' name='__Stubbing__Provides_the_correct_returnValue_3' time='0.001'/>
   </testsuite>
   <testsuite name='MockNStub_Tests.PropertiesAsMethodsSpec' tests='6' failures='0'>
     <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_a_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then__it_provides_correct_fullName' time='0.001'/>
-    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_a_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then__it_provides_correct_nickname' time='0.004'/>
+    <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_a_Mock_with_full_name_and_optional_nickname__When_fullName_is_stubbed__Then__it_provides_correct_nickname' time='0.003'/>
     <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_a_Mock_with_full_name_and_optional_nickname__When_nickname_is_stubbed__Then__it_provides_correct_nickName' time='0.001'/>
     <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_a_Mock_with_full_name_and_optional_nickname__When_fullName_is_set__And__that_fullName_is_expected_to_be_set__Then__it_doesnt_fail_verification' time='0.001'/>
     <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_a_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_nil__And__nil_is_expected_to_be_set__Then__it_doesnt_fail_verification' time='0.001'/>
     <testcase classname='MockNStub_Tests.PropertiesAsMethodsSpec' name='Given_a_Mock_with_full_name_and_optional_nickname__When_nickname_is_set__to_non_nil_string__And__that_nickname_expected_to_be_set__Then__it_doesnt_fail_verification' time='0.001'/>
+  </testsuite>
+  <testsuite name='MockNStub_Tests.VerificationAmountSpec' tests='12' failures='0'>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_1_times__And_When_1_of_calls_are_expected__Then_it_doesn_t_fail' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_1_times__And_When_any_amount_of_calls_are_expected__Then_it_doesn_t_fail' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_1_times__And_When_2_of_calls_are_expected__Then_it_fails' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_2_times__And_When_2_of_calls_are_expected__Then_it_doesn_t_fail' time='0.002'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_2_times__And_When_any_amount_of_calls_are_expected__Then_it_doesn_t_fail' time='0.002'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_2_times__And_When_3_of_calls_are_expected__Then_it_fails' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_3_times__And_When_3_of_calls_are_expected__Then_it_doesn_t_fail' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_3_times__And_When_any_amount_of_calls_are_expected__Then_it_doesn_t_fail' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_a_method_is_called_3_times__And_When_4_of_calls_are_expected__Then_it_fails' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_expecting_two_calls_with_true_arguments__When_doThat_is_called_the_expected_way__And_When_doThat_is_called_the_unexpected_way__Then_it_fails' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_expecting_two_calls_with_true_arguments__When_do_that_is_called_the_right_way_three_times__Then_it_fails' time='0.001'/>
+    <testcase classname='MockNStub_Tests.VerificationAmountSpec' name='Given_a_MockWithFunctionIDs__When_expecting_two_calls_with_true_arguments__When_do_that_is_called_the_right_way_two_times__Then_it_doesnt_fail' time='0.001'/>
   </testsuite>
 </testsuites>
