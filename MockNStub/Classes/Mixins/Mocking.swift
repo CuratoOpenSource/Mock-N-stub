@@ -121,7 +121,18 @@ private extension Mocking {
     }
     
     func failureMessage(for failedVerification: Verification) -> String {
-        return "Could not verify call to `\(methodName(from: failedVerification))`" + verificationFailureMessageExplaination(for: failedVerification)
+        return failureMessagePrefix(for: failedVerification)
+                + " `\(methodName(from: failedVerification))`"
+                + verificationFailureMessageExplaination(for: failedVerification)
+    }
+    
+    func failureMessagePrefix(for failedVerification: Verification) -> String {
+        switch failedVerification.amount {
+        case .anyAmount:
+            return "Could not verify call to"
+        case .exactly(let amount):
+            return "Could not verify \(amount) calls to"
+        }
     }
     
     func verificationFailureMessageExplaination(for FailedVerification: Verification) -> String {
@@ -164,7 +175,7 @@ private extension Mocking {
                 }
             case .exactly(let amount):
                 
-                if numberOfCallsThatMatchVerification == 0 {
+                if numberOfCallsThatMatchVerification == 0 && amount != 0 {
                     appendFailureForCurrentVerification()
                 } else if numberOfCallsThatMatchVerification != amount {
                     appendFailureForCurrentVerification()
