@@ -39,14 +39,14 @@ platform :ios do
   		sh("git", "merge", "master")
   		sh("git", "push", "origin", "develop")
 
-  		pod_push
-
-      github_release = set_github_release(repository_name: "lvnkmn/Mock-N-stub",
+        github_release = set_github_release(repository_name: "lvnkmn/Mock-N-stub",
                                           api_token: ENV["GITHUB_TOKEN"],
                                           name: version,
                                           tag_name: version,
                                           description: "[Closed Issues](https://github.com/lvnkmn/Mock-N-stub/milestone/#{mileStoneNumber}?closed=1)",
                                           commitish: "master")
+
+        pod_push
 	end
 
   lane :milestone_number do |options|
