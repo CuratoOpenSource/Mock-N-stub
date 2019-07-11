@@ -115,6 +115,21 @@ mock.expect(callToFunction: "tableView(_:numberOfRowsInSection:)", withArguments
 }))
 ```
 
+It's also possible to expect an exact amount of calls:
+
+```Swift
+mock.expect(.exactly(amount: 42), callsToFunction: "tableView(_:cellForRowAt:)")
+```
+
+or 
+
+```Swift
+mock.expect(.exactly(amount: 42), callsToFunction: "tableView(_:numberOfRowsInSection:)", withArgumentsThatMatch: ArgumentMatcher(matcher: { (args: (UITableView, Int)) -> Bool in
+	return args.0 === tableView && args.1 == 42                        
+}))
+```
+
+
 ### Verifying
 
 regardless of how methods have been identified:
