@@ -164,7 +164,7 @@ private extension Mocking {
                 }
             case .exactly(let amount):
                 
-                if numberOfCallsThatMatchVerification == 0 {
+                if numberOfCallsThatMatchVerification == 0 && amount != 0 {
                     appendFailureForCurrentVerification()
                 } else if numberOfCallsThatMatchVerification != amount {
                     appendFailureForCurrentVerification()

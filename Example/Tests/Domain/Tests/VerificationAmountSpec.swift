@@ -16,6 +16,26 @@ class VerificationAmountSpec: QuickSpec {
             
         })
         
+        givenAMock.when("expecting zero calls to doThis") {
+            sut.expect(.exactly(amount: 0), callsToFunctionWithID: .doThis)
+            
+            }.andWhen("zero calls have been made to doIt", {})
+            .then("it shouldn't fail when verifying") {
+                sut.verify()
+        }
+        
+        givenAMock.when("expecting zero calls to doThat with true arg") {
+            sut.expect(.exactly(amount: 0), callsToFunctionWithID: .doThatWithBooleanArgument,
+                       withArgumentsThatMatch: ArgumentMatcher(matcher: { (boolArg: Bool) -> Bool in
+                return boolArg == true
+            }))
+            
+            }.when("a call is made to doThat with false arg") {
+                sut.doThat(with: false)
+            }.then("it should fail when verifying") {
+                sut.verify()
+        }
+        
         (1...3).forEach { (callCount) in
             
             let mockWithVariableAmountOfMethodCalls = givenAMock.when("a method is called \(callCount) times", {
