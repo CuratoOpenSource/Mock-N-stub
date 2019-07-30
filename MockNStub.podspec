@@ -17,6 +17,6 @@ The implementations in MockNStub are completely protocol oriented. This allows t
   s.source_files = 'MockNStub/Classes/**/*'
 
   s.frameworks = 'XCTest', 'UIKit'
-  s.dependency 'InjectableLoggers', '~> 1'
+  s.dependency 'InjectableLoggers', '~> 2'
   s.dependency 'ArrayPlusTuple', '~> 1'
 end
