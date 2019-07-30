@@ -10,15 +10,17 @@ class LoggerSpec: QuickSpec {
         
         describe("Given the logger instance") {
             
-            let sut = logger
+            var sut: Logger!
+            
+            beforeEach {
+                sut = logger
+            }
             
             context("When setting are asked", closure: {
                 
-                let settings = sut.settings
-                
-                it("Then  their active loglevel is Info", closure: {
+                it("Then their active loglevel is Info", closure: {
                     
-                    expect(settings.activeLogLevel).to(equal(Loglevel.info))
+                    expect(sut.settings.activeLogLevel).to(equal(Loglevel.info))
                 })
             })
         }
