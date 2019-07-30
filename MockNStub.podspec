@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MockNStub'
-  s.version          = '5.1.1'
+  s.version          = '6.0.0'
   s.swift_version    = '5.0'
   s.summary          = 'Code completed Mocking and Stubbing for Swift protocols and classes.'
   s.description      = <<-DESC
