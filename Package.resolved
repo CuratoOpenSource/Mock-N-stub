@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ArrayPlusTuple",
+        "repositoryURL": "https://github.com/lvnkmn/ArrayPlusTuple",
+        "state": {
+          "branch": null,
+          "revision": "4cc0ce2f2a154f7093b5b090aa59df7eacb0a642",
+          "version": "2.1.0"
+        }
+      },
+      {
+        "package": "InjectableLoggers",
+        "repositoryURL": "https://github.com/lvnkmn/InjectableLoggers",
+        "state": {
+          "branch": null,
+          "revision": "0092a51940b00bb09ffb0593e7ed53140b3b4806",
+          "version": "2.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
