@@ -1,3 +1,5 @@
+import UIKit
+
 extension CGRect: ProvidingDefaultStubValue {
     
     public static func defaultStubValue() -> CGRect {

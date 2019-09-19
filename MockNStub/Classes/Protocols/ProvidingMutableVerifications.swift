@@ -1,3 +1,5 @@
+import Foundation
+
 public protocol ProvidingMutableVerifications: class {
     
     var verifications: [Verification] { get set }

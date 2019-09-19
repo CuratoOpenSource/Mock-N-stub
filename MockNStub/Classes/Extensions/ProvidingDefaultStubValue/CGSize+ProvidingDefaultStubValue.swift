@@ -1,3 +1,5 @@
+import UIKit
+
 extension CGSize: ProvidingDefaultStubValue {
     
     public static func defaultStubValue() -> CGSize {

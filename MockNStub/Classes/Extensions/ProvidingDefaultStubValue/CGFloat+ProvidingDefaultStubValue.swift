@@ -1,3 +1,5 @@
+import UIKit
+
 extension CGFloat: ProvidingDefaultStubValue {
     
     public static func defaultStubValue() -> CGFloat {

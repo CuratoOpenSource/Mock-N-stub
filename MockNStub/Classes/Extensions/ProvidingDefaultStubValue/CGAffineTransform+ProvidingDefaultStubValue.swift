@@ -1,3 +1,5 @@
+import UIKit
+
 extension CGAffineTransform: ProvidingDefaultStubValue {
     
     public static func defaultStubValue() -> CGAffineTransform {
