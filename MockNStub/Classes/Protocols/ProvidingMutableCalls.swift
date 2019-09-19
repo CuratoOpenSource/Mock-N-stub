@@ -1,3 +1,5 @@
+import Foundation
+
 public protocol ProvidingMutableCalls: class {
     
     var calls: [Call] { get set }
