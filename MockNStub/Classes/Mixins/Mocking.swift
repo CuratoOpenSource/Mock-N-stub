@@ -56,9 +56,9 @@ public extension Mocking {
         return findFails().count > 0
     }
     
-    func reset() {
+    func resetMock() {
+        resetStub()
         calls = []
-        callValues = []
         verifications = []
     }
 }

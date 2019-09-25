@@ -29,7 +29,7 @@ class EmptyStubSpec: QuickSpec {
                 context("When resetted", {
                     
                     beforeEach {
-                        sut.reset()
+                        sut.resetStub()
                     }
                     
                     it("Then callValues are empty", closure: {

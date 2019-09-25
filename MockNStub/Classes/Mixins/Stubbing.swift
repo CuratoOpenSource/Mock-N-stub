@@ -1,4 +1,4 @@
-public protocol Stubbing: ProvidingMutableCallValues, Resetable {}
+public protocol Stubbing: ProvidingMutableCallValues {}
 
 //MARK: Public
 public extension Stubbing {
@@ -16,7 +16,7 @@ public extension Stubbing {
         callValues.append(CallValue(methodID: .name(function), value: value, matcher: matcher))
     }
     
-    func reset() {
+    func resetStub() {
         callValues = []
     }
 }

@@ -39,7 +39,7 @@ class EmptyMockSpec: QuickSpec {
                 context("When resetted", {
                     
                     beforeEach {
-                        sut.reset()
+                        sut.resetMock()
                     }
                     
                     it("Then callValues are empty", closure: {
