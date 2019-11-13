@@ -101,7 +101,6 @@ public extension Mocking where Self: DefiningFunctionID {
     func expect(_ amount: Verification.Amount,
                 callsToFunctionWithID functionID: FunctionID,
                 withArgumentsThatMatch matcher: MatchingArguments = anyArgumentMatcher) {
-        print("👋👋👋👋👋👋👋")
         expect(amount, callsToFunction: functionID.rawValue, withArgumentsThatMatch: matcher)
     }
 }
