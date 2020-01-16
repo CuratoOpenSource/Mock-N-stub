@@ -1,14 +1,8 @@
 # Mock 'N Stub
 
-[![Version](http://img.shields.io/cocoapods/v/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![Platform](http://img.shields.io/cocoapods/p/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![License](http://img.shields.io/cocoapods/l/MockNStub.svg?style=flat)](LICENSE)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/lvnkmn/mock-n-stub) [![Platform](http://img.shields.io/cocoapods/p/MockNStub.svg?style=flat)](http://cocoapods.org/pods/Zoomy) [![License](http://img.shields.io/cocoapods/l/MockNStub.svg?style=flat)](LICENSE)
 
 Code completed Mocking and Stubbing for Swift protocols and classes.
-
-## Example
-
-To see the example project, run the following in your terminal:
-
-`pod try MockNStub`
 
 ## Setup
 
@@ -221,12 +215,7 @@ Create a [feature request](https://github.com/mennolovink/Mock-N-stub/issues/new
 
 ## Installation
 
-MockNStub is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'MockNStub'
-```
+MockNStub is available through [Swift Package Manager](https://swift.org/package-manager/). To install it, simply add it to your project using this repository's URL as explained [here](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).
 
 ## License
 
