@@ -157,35 +157,33 @@ private extension Mocking {
             .filter({ verification.matcher.match(arguments: $0.arguments) })
     }
     
+    func failingVerifications() -> [Verification] {
+        verifications
+            .filter { verification in
+                switch verification.amount {
+                    
+                case .anyAmount:
+                    if calls(matchingVerification: verification).count == 0 {
+                        return true
+                    }
+                case .exactly(let amount):
+                    
+                    if calls(matchingVerification: verification).count == 0 && amount != 0 {
+                        return true
+                    } else if calls(matchingVerification: verification).count != amount {
+                        return true
+                    }
+                }
+                
+                return false
+            }
+    }
+    
     func findFails(forFile file: StaticString = #file, andLine line: UInt = #line) -> [Fail] {
-        
-        var fails = [Fail]()
-        
-        for verification in verifications {
-            
-            func appendFailureForCurrentVerification() {
-                fails.append {
-                    self.failureHandler.fail(with: self.failureMessage(for: verification),
-                                             at: Location(file: file, line: line))
-                }
+        failingVerifications()
+            .map { (verification) in
+                { self.failureHandler.fail(with: self.failureMessage(for: verification),
+                                           at: Location(file: file, line: line)) }
             }
-            
-            switch verification.amount {
-                
-            case .anyAmount:
-                if calls(matchingVerification: verification).count == 0 {
-                    appendFailureForCurrentVerification()
-                }
-            case .exactly(let amount):
-                
-                if calls(matchingVerification: verification).count == 0 && amount != 0 {
-                    appendFailureForCurrentVerification()
-                } else if calls(matchingVerification: verification).count != amount {
-                    appendFailureForCurrentVerification()
-                }
-            }
-        }
-        
-        return fails
     }
 }
