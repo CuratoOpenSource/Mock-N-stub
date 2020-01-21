@@ -55,6 +55,10 @@ public extension Mocking {
     func wouldFailIfVerified() -> Bool {
         return findFails().count > 0
     }
+
+    func applicableFailureMessages() -> [String] {
+        failingVerifications().map(failureMessage(for:))
+    }
     
     func resetMock() {
         resetStub()
@@ -150,38 +154,40 @@ private extension Mocking {
         return calls.map{ "-\($0.methodID.rawString)\n" }.joined()
     }
     
+    
+    func calls(matchingVerification verification: Verification) -> [Call] {
+        calls
+            .filter({   $0.methodID == verification.methodID })
+            .filter({ verification.matcher.match(arguments: $0.arguments) })
+    }
+    
+    func failingVerifications() -> [Verification] {
+        verifications
+            .filter { verification in
+                switch verification.amount {
+                    
+                case .anyAmount:
+                    if calls(matchingVerification: verification).count == 0 {
+                        return true
+                    }
+                case .exactly(let amount):
+                    
+                    if calls(matchingVerification: verification).count == 0 && amount != 0 {
+                        return true
+                    } else if calls(matchingVerification: verification).count != amount {
+                        return true
+                    }
+                }
+                
+                return false
+            }
+    }
+    
     func findFails(forFile file: StaticString = #file, andLine line: UInt = #line) -> [Fail] {
-        
-        var fails = [Fail]()
-        
-        for verification in verifications {
-            
-            func appendFailureForCurrentVerification() {
-                fails.append {
-                    self.failureHandler.fail(with: self.failureMessage(for: verification),
-                                             at: Location(file: file, line: line))
-                }
+        failingVerifications()
+            .map { (verification) in
+                { self.failureHandler.fail(with: self.failureMessage(for: verification),
+                                           at: Location(file: file, line: line)) }
             }
-            
-            let numberOfCallsThatMatchVerification = calls  .filter({   $0.methodID == verification.methodID })
-                                                            .filter({ verification.matcher.match(arguments: $0.arguments) }).count
-            
-            switch verification.amount {
-                
-            case .anyAmount:
-                if numberOfCallsThatMatchVerification == 0 {
-                    appendFailureForCurrentVerification()
-                }
-            case .exactly(let amount):
-                
-                if numberOfCallsThatMatchVerification == 0 && amount != 0 {
-                    appendFailureForCurrentVerification()
-                } else if numberOfCallsThatMatchVerification != amount {
-                    appendFailureForCurrentVerification()
-                }
-            }
-        }
-        
-        return fails
     }
 }
