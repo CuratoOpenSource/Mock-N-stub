@@ -55,6 +55,10 @@ public extension Mocking {
     func wouldFailIfVerified() -> Bool {
         return findFails().count > 0
     }
+
+    func applicableFailureMessages() -> [String] {
+        failingVerifications().map(failureMessage(for:))
+    }
     
     func resetMock() {
         resetStub()
