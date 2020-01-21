@@ -150,6 +150,13 @@ private extension Mocking {
         return calls.map{ "-\($0.methodID.rawString)\n" }.joined()
     }
     
+    
+    func calls(matchingVerification verification: Verification) -> [Call] {
+        calls
+            .filter({   $0.methodID == verification.methodID })
+            .filter({ verification.matcher.match(arguments: $0.arguments) })
+    }
+    
     func findFails(forFile file: StaticString = #file, andLine line: UInt = #line) -> [Fail] {
         
         var fails = [Fail]()
@@ -163,20 +170,17 @@ private extension Mocking {
                 }
             }
             
-            let numberOfCallsThatMatchVerification = calls  .filter({   $0.methodID == verification.methodID })
-                                                            .filter({ verification.matcher.match(arguments: $0.arguments) }).count
-            
             switch verification.amount {
                 
             case .anyAmount:
-                if numberOfCallsThatMatchVerification == 0 {
+                if calls(matchingVerification: verification).count == 0 {
                     appendFailureForCurrentVerification()
                 }
             case .exactly(let amount):
                 
-                if numberOfCallsThatMatchVerification == 0 && amount != 0 {
+                if calls(matchingVerification: verification).count == 0 && amount != 0 {
                     appendFailureForCurrentVerification()
-                } else if numberOfCallsThatMatchVerification != amount {
+                } else if calls(matchingVerification: verification).count != amount {
                     appendFailureForCurrentVerification()
                 }
             }
