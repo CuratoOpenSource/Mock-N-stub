@@ -60,6 +60,23 @@ public extension Mocking {
         failingVerifications().map(failureMessage(for:))
     }
     
+    func receivedArgumentsOfInferredType<Arguments>() -> [Arguments] {
+        calls
+            .compactMap({ (call) -> Arguments? in
+                call.arguments as? Arguments
+            })
+    }
+    
+    func lastReceivedArgumentsOfInferredType<Arguments>() -> Arguments? {
+        let receivedArguments: [Arguments] = receivedArgumentsOfInferredType()
+        return receivedArguments.last
+    }
+    
+    func firstReceivedArgumentsOfInferredType<Arguments>() -> Arguments? {
+        let receivedArguments: [Arguments] = receivedArgumentsOfInferredType()
+        return receivedArguments.first
+    }
+    
     func resetMock() {
         resetStub()
         calls = []
