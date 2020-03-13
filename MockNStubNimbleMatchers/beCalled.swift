@@ -67,8 +67,8 @@ public func beCalled<T: Mocking & DefiningFunctionID, ARGS>(_ amount: Verificati
 
 public func beCalled<T: Mocking & DefiningFunctionID, ARGS>(_ amount: Verification.Amount,
                                                             timesAt functionID: T.FunctionID,
-                                                            matchingExpectations matcher: ((ARGS)->Void)) -> Predicate<T> {
-    beCalled(amount, timesAt: functionID, withArgumentsThatMatch: returningTrue(matcher))
+                                                            matchingExpectations expectations: @escaping ((ARGS)->Void)) -> Predicate<T> {
+    beCalled(amount, timesAt: functionID, withArgumentsThatMatch: returningTrue(expectations))
 }
 
 //MARK: - Private
