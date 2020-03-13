@@ -63,6 +63,14 @@ public func beCalled<T: Mocking & DefiningFunctionID, ARGS>(_ amount: Verificati
     }
 }
 
+//MARK: With argument matching expectations
+
+public func beCalled<T: Mocking & DefiningFunctionID, ARGS>(_ amount: Verification.Amount,
+                                                            timesAt functionID: T.FunctionID,
+                                                            matchingExpectations matcher: ((ARGS)->Void)) -> Predicate<T> {
+    beCalled(amount, timesAt: functionID, withArgumentsThatMatch: returningTrue(matcher))
+}
+
 //MARK: - Private
 
 private let matcherThatAlwaysPasses = { (args: Any?) -> Bool in
