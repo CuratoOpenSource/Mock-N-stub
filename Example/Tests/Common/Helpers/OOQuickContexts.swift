@@ -1,9 +1,5 @@
 //
-//  OOQuickContexts.swift
-//  MockNStub_Example
-//
-//  Created by menno lovink on 10/07/2019.
-//  Copyright © 2019 CocoaPods. All rights reserved.
+//  Copyright © 2020 Curato Research BV. All rights reserved.
 //
 
 import Foundation
