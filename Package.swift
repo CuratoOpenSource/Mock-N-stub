@@ -11,7 +11,7 @@ let package = Package(
         .library(name: "MockNStubNimbleMatchers", targets: ["MockNStubNimbleMatchers"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/lvnkmn/ArrayPlusTuple", from: "2.1.0"),
+        .package(url: "https://github.com/CuratoOpenSource/ArrayPlusTuple", from: "2.1.0"),
         .package(url: "https://github.com/Quick/Nimble", from: "8.0.2"),
     ],
     targets: [
