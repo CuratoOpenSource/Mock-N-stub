@@ -1,3 +1,7 @@
+//
+//  Copyright © 2020 Curato Research BV. All rights reserved.
+//
+
 public struct Call {
     
     public let methodID: MethodID

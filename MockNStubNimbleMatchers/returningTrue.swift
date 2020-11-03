@@ -1,8 +1,5 @@
 //
-//  File.swift
-//  
-//
-//  Created by menno on 13/03/2020.
+//  Copyright © 2020 Curato Research BV. All rights reserved.
 //
 
 import Foundation

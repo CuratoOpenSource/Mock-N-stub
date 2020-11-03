@@ -1,3 +1,7 @@
+//
+//  Copyright © 2020 Curato Research BV. All rights reserved.
+//
+
 public class ArgumentMatcher<ArgumentsType> {
     
     private let matcher: (ArgumentsType) -> Bool
